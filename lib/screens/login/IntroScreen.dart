@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/model/IntroSliderModel.dart';
-import 'package:virtualmarriage/screens/HowToUse.dart';
-import 'package:virtualmarriage/screens/splashScreen.dart';
-import 'package:virtualmarriage/utils/HexColor.dart';
-import 'package:virtualmarriage/utils/PreferenceHelper.dart';
+import 'package:virtualmarriageME/model/IntroSliderModel.dart';
+import 'package:virtualmarriageME/screens/HowToUse.dart';
+import 'package:virtualmarriageME/screens/splashScreen.dart';
+import 'package:virtualmarriageME/utils/HexColor.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 
 
 class IntroScreen extends StatefulWidget {

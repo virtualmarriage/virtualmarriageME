@@ -9,9 +9,9 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:virtualmarriage/utils/const.dart';
-import 'package:virtualmarriage/widgets/full_photo.dart';
-import 'package:virtualmarriage/widgets/loading.dart';
+import 'package:virtualmarriageME/utils/const.dart';
+import 'package:virtualmarriageME/widgets/full_photo.dart';
+import 'package:virtualmarriageME/widgets/loading.dart';
 
 class Chat extends StatelessWidget {
   final String peerId;

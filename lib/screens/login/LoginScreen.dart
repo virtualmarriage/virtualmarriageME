@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/screens/HomeScreen.dart';
-import 'package:virtualmarriage/utils/CommonComponent.dart';
-import 'package:virtualmarriage/utils/progressdialog.dart';
-import 'package:virtualmarriage/widgets/SubmitButton.dart';
+import 'package:virtualmarriageME/screens/HomeScreen.dart';
+import 'package:virtualmarriageME/utils/CommonComponent.dart';
+import 'package:virtualmarriageME/utils/progressdialog.dart';
+import 'package:virtualmarriageME/widgets/SubmitButton.dart';
 
 import 'OtpVerificationScreen.dart';
 

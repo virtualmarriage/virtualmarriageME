@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:virtualmarriage/model/ProductData.dart';
-import 'package:virtualmarriage/model/UserData.dart';
-import 'package:virtualmarriage/utils/PreferenceHelper.dart';
-import 'package:virtualmarriage/utils/progressdialog.dart';
+import 'package:virtualmarriageME/model/ProductData.dart';
+import 'package:virtualmarriageME/model/UserData.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
+import 'package:virtualmarriageME/utils/progressdialog.dart';
 
 class Api {
   final String _baseUrl = "http://yogihost.in/fueldynamic/";

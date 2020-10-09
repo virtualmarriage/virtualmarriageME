@@ -1,6 +1,6 @@
 {
-    "name": "virtualmarriage",
-    "short_name": "virtualmarriage",
+    "name": "virtualmarriageME",
+    "short_name": "virtualmarriageME",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

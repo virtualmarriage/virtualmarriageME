@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/utils/chips_choice.dart';
+import 'package:virtualmarriageME/utils/chips_choice.dart';
 
 class WalletRecharge extends StatefulWidget {
   @override

@@ -1,4 +1,4 @@
-package com.virtualmarriage
+package com.virtualmarriageME
 
 import io.flutter.embedding.android.FlutterActivity
 

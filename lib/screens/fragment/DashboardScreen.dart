@@ -2,13 +2,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:virtualmarriage/model/ProductData.dart';
-import 'package:virtualmarriage/screens/profile/ProfileDetailScreen.dart';
-import 'package:virtualmarriage/services/Api.dart';
-import 'package:virtualmarriage/utils/CommonComponent.dart';
-import 'package:virtualmarriage/utils/Constants.dart';
-import 'package:virtualmarriage/utils/HexColor.dart';
-import 'package:virtualmarriage/widgets/item_card.dart';
+import 'package:virtualmarriageME/model/ProductData.dart';
+import 'package:virtualmarriageME/screens/profile/ProfileDetailScreen.dart';
+import 'package:virtualmarriageME/services/Api.dart';
+import 'package:virtualmarriageME/utils/CommonComponent.dart';
+import 'package:virtualmarriageME/utils/Constants.dart';
+import 'package:virtualmarriageME/utils/HexColor.dart';
+import 'package:virtualmarriageME/widgets/item_card.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override

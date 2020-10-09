@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/model/ProductData.dart';
-import 'package:virtualmarriage/utils/Constants.dart';
+import 'package:virtualmarriageME/model/ProductData.dart';
+import 'package:virtualmarriageME/utils/Constants.dart';
 
 class ChatListItem extends StatelessWidget {
   final ProductData product;

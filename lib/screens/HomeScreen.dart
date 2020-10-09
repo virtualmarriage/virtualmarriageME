@@ -2,10 +2,10 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
-import 'package:virtualmarriage/screens/HowToUse.dart';
-import 'package:virtualmarriage/screens/fragment/CallListScreen.dart';
-import 'package:virtualmarriage/screens/fragment/ChatListScreen.dart';
-import 'package:virtualmarriage/screens/fragment/ProfileScreen.dart';
+import 'package:virtualmarriageME/screens/HowToUse.dart';
+import 'package:virtualmarriageME/screens/fragment/CallListScreen.dart';
+import 'package:virtualmarriageME/screens/fragment/ChatListScreen.dart';
+import 'package:virtualmarriageME/screens/fragment/ProfileScreen.dart';
 
 import 'fragment/DashboardScreen.dart';
 import 'wallet/WalletTransaction.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/utils/const.dart';
+import 'package:virtualmarriageME/utils/const.dart';
 
 class Loading extends StatelessWidget {
   const Loading();

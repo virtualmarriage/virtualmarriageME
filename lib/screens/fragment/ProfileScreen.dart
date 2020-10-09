@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/model/ProductData.dart';
-import 'package:virtualmarriage/screens/profile/EditProfileScreen.dart';
-import 'package:virtualmarriage/screens/profile/SettingScreen.dart';
-import 'package:virtualmarriage/screens/wallet/WalletRecharge.dart';
-import 'package:virtualmarriage/screens/wallet/WalletTransaction.dart';
-import 'package:virtualmarriage/services/Api.dart';
+import 'package:virtualmarriageME/model/ProductData.dart';
+import 'package:virtualmarriageME/screens/profile/EditProfileScreen.dart';
+import 'package:virtualmarriageME/screens/profile/SettingScreen.dart';
+import 'package:virtualmarriageME/screens/wallet/WalletRecharge.dart';
+import 'package:virtualmarriageME/screens/wallet/WalletTransaction.dart';
+import 'package:virtualmarriageME/services/Api.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override

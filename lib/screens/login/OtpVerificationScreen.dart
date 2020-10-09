@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/utils/codeinput.dart';
-import 'package:virtualmarriage/utils/progressdialog.dart';
+import 'package:virtualmarriageME/utils/codeinput.dart';
+import 'package:virtualmarriageME/utils/progressdialog.dart';
 
 import '../HomeScreen.dart';
 

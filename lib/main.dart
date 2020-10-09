@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:virtualmarriage/screens/login/IntroScreen.dart';
-import 'package:virtualmarriage/screens/splashScreen.dart';
-import 'package:virtualmarriage/utils/PreferenceHelper.dart';
+import 'package:virtualmarriageME/screens/login/IntroScreen.dart';
+import 'package:virtualmarriageME/screens/splashScreen.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 
 void main() {
   runApp(MyApp());

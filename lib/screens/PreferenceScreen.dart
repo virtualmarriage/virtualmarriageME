@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:virtualmarriageME/screens/HomeScreen.dart';
 
 class PreferenceScreen extends StatefulWidget {
   @override
@@ -9,6 +10,7 @@ class PreferenceScreen extends StatefulWidget {
 class _PreferenceScreenState extends State<PreferenceScreen> {
   String radioItem = '';
   List<RadioModel> sampleData = new List<RadioModel>();
+  var fullname = TextEditingController();
 
   @override
   void initState() {
@@ -16,7 +18,7 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
     super.initState();
     sampleData.add(new RadioModel(false, 'Women', 'assets/icon_female.png'));
     sampleData.add(new RadioModel(false, 'Man', 'assets/icon_male.png'));
-    sampleData.add(new RadioModel(false, 'Both', 'assets/icon_female.png'));
+    sampleData.add(new RadioModel(false, 'Hidden', 'assets/icon_female.png'));
   }
 
   @override
@@ -26,76 +28,136 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
           title: Text('Preference'),
           backgroundColor: Color(0xFFEE829C),
         ),
-        body: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
-            ),
-        child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: const EdgeInsets.only(bottom: 10),
-                    child: Text(
-                      'Looking for Virtual Marriage!',
-                      style: TextStyle(
-                          color: Color(0xFFEE829C),
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20),
-                    )),
-                Card(
-                  child: Container(
-                      height: 100,
-                      alignment: Alignment.center,
-                      child: Center(
-                        child:  new ListView.builder(
-                          scrollDirection:  Axis.horizontal,
-                          itemCount: sampleData.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return new InkWell(
-                              //highlightColor: Colors.red,
-                              splashColor: Color(0xFFEE829C),
-                              onTap: () {
-                                setState(() {
-                                  sampleData.forEach((element) => element.isSelected = false);
-                                  sampleData[index].isSelected = true;
-                                  if(index == 0){
-                                    radioItem = "Women";
-                                  }else if(index == 1){
-                                    radioItem = "Man";
-                                  }else if(index == 2){
-                                    radioItem = "Both";
-                                  }
-                                });
-                              },
-                              child: new RadioItem(sampleData[index]),
-                            );
-                          },
+        body: SingleChildScrollView(
+          child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
+              ),
+              child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(bottom: 10),
+                          child: Text(
+                            'Please update your profile',
+                            style: TextStyle(
+                                color: Color(0xFFEE829C),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
+                          )),
+                      Card(
+                        child: Container(
+                            height: 100,
+                            alignment: Alignment.center,
+                            child: Center(
+                              child:  new ListView.builder(
+                                scrollDirection:  Axis.horizontal,
+                                itemCount: sampleData.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return new InkWell(
+                                    //highlightColor: Colors.red,
+                                    splashColor: Color(0xFFEE829C),
+                                    onTap: () {
+                                      setState(() {
+                                        sampleData.forEach((element) => element.isSelected = false);
+                                        sampleData[index].isSelected = true;
+                                        if(index == 0){
+                                          radioItem = "Women";
+                                        }else if(index == 1){
+                                          radioItem = "Man";
+                                        }else if(index == 2){
+                                          radioItem = "Hidden";
+                                        }
+                                      });
+                                    },
+                                    child: new RadioItem(sampleData[index]),
+                                  );
+                                },
+                              ),
+                            )
                         ),
-                      )
-                  ),
-                ),
-                SizedBox(height: 40,),
-                Container(
-                    height: 50,
-                    width: double.infinity,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                          side: BorderSide(color: Color(0xFFEE829C))
                       ),
-                      textColor: Colors.white,
-                      color: Color(0xFFEE829C),
-                      child: Text('Continue',
-                        style: TextStyle(fontSize: 22),),
-                      onPressed: () {
+                      SizedBox(height: 20,),
 
-                        print("pressed---$radioItem");
-                      },
-                    )),
-              ],
-            ))),
+                      TextFormField(
+                        decoration: new InputDecoration(
+                          labelText: "Enter Name",
+                          fillColor: Colors.white,
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(10.0),
+                            borderSide: new BorderSide(
+                              color: Color(0xFFEE829C),
+                              width: 2,
+                            ),
+                          ),
+                        ),
+                        validator: (val) {
+                          if(val.length==0) {
+                            return "Name cannot be empty";
+                          }else{
+                            return null;
+                          }
+                        },
+                        keyboardType: TextInputType.text,
+                        style: new TextStyle(
+                          //color: Color(0xFFEE829C),
+                          fontSize: 18,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                      SizedBox(height: 20,),
+                      TextFormField(
+                        decoration: new InputDecoration(
+                          labelText: "Enter Age",
+                          fillColor: Colors.white,
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(10.0),
+                            borderSide: new BorderSide(
+                              color: Color(0xFFEE829C),
+                              width: 2,
+                            ),
+                          ),
+                        ),
+                        validator: (val) {
+                          if(val.length==0) {
+                            return "Age cannot be empty";
+                          }else{
+                            return null;
+                          }
+                        },
+                        keyboardType: TextInputType.number,
+                        style: new TextStyle(
+                          //color: Color(0xFFEE829C),
+                          fontSize: 18,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+
+
+                      SizedBox(height: 40,),
+                      Container(
+                          height: 50,
+                          width: double.infinity,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                                side: BorderSide(color: Color(0xFFEE829C))
+                            ),
+                            textColor: Colors.white,
+                            color: Color(0xFFEE829C),
+                            child: Text('Continue',
+                              style: TextStyle(fontSize: 22),),
+                            onPressed: () {
+
+                              print("pressed---$radioItem");
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
+                            },
+                          )),
+                    ],
+                  ))),
+        ),
     );
   }
 }

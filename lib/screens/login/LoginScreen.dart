@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   SubmitButton(
-                    title: "Login",
+                     title: "Login",
                     act: () async {
                       if (_txtNumber.text.length == 10) {
                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),);
@@ -102,13 +102,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                     },
                   ),
-                  SizedBox(height: 20,),
+                 /* SizedBox(height: 20,),
                   InkWell(
                     onTap: (){
                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),),);
                     },
                     child: Text("SKIP", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.normal,decoration: TextDecoration.underline,),),
-                  )
+                  )*/
                 ],
               ),
             ),

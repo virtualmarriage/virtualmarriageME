@@ -84,8 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
           }),
       items: [
         BottomNavyBarItem(
-          //icon: Icon(Icons.recommend),
-          icon: Icon(Icons.person_add),
+          icon: Icon(Icons.recommend),
           title: Text('Recommend'),
           activeColor: Color(0xFFEE829C),
         ),
@@ -481,92 +480,4 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/*
-class CategoriesListView extends StatelessWidget {
-  final String title;
-  final List<String> categories;
-  final List<String> categoryTitle;
 
-  const CategoriesListView({Key key,
-    @required this.title,
-    @required this.categories,
-    @required this.categoryTitle})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: LinePainter(),
-      child: Column(
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(top: 12),
-            height: 90,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: categories.length,
-              itemBuilder: (BuildContext context, int index) {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.fade,
-                        child: ProductList(),
-                      ),
-                    );
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Container(
-                          width: 55,
-                          height: 55,
-                          padding: EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white,
-                            border: Border.all(
-                              color: Colors.blueGrey,
-                              width: 1,
-                            ),
-                          ),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/images/" + categories[index],
-                                ),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            categoryTitle[index],
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontFamily: 'Regular',
-                              color: Colors.black,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}*/

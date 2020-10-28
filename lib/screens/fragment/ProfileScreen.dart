@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:virtualmarriageME/model/ProductData.dart';
+import 'package:flutter/rendering.dart';
 import 'package:virtualmarriageME/screens/profile/EditProfileScreen.dart';
-import 'package:virtualmarriageME/screens/profile/SettingScreen.dart';
-import 'package:virtualmarriageME/screens/wallet/WalletRecharge.dart';
-import 'package:virtualmarriageME/screens/wallet/WalletTransaction.dart';
-import 'package:virtualmarriageME/services/Api.dart';
+import 'package:virtualmarriageME/utils/chips_choice.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -13,200 +10,317 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  bool isLoading;
-  Future<List<ProductData>> _future;
 
-  @override
-  void initState() {
-    super.initState();
-    _future = Api().getProductList();
-  }
+  int tag = 1;
+  List<String> tags = [];
+  List<String> options = [
+    'Bidi', 'Daru', 'Hukkka',
+    'Hot Chat', 'Ghoomana', 'Trip',
+    'Outing', 'Travel', 'Food', 'Coffee',
+    'Meeting',
+  ];
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    final double itemHeight = (size.height) / 2;
-    final double itemWidth = size.width / 2;
-
-    //double ratio = (itemWidth / itemHeight) + .13;
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          //color: Color(0xffffffe4),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
-          ),
-          child: Column(
-            children: <Widget>[
-              Container(
-                alignment: Alignment.topCenter,
-                padding: EdgeInsets.all(10),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 30,
-                    ),
-                    CircleAvatar(
-                      backgroundImage: AssetImage("assets/girl_image.png"),
-                      backgroundColor: Colors.grey,
-                      radius: 70,
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text("Garima Thakur",
-                        style: TextStyle(fontSize: 22, color: Colors.black)),
-                    Text("+91 9999546376",
-                        style: TextStyle(fontSize: 14, color: Colors.black)),
-                  ],
-                ),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(20),
+              //color: Color(0xffffffe4),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
               ),
-              Container(
-                child: Divider(
-                  color: Color(0xFFEE829C),
-                  thickness: 1,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => WalletTransaction(),
+
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Card(
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.network(
+                            'https://placeimg.com/640/480/any5',
+                            fit: BoxFit.fill,
                           ),
-                        );
-                      },
-                      child: Column(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          elevation: 5,
+                          margin: EdgeInsets.all(5),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Card(
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.network(
+                            'https://placeimg.com/640/480/any8',
+                            fit: BoxFit.fill,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          elevation: 5,
+                          margin: EdgeInsets.all(5),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Card(
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.network(
+                            'https://placeimg.com/640/480/any',
+                            fit: BoxFit.fill,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          elevation: 5,
+                          margin: EdgeInsets.all(5),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Card(
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.network(
+                            'https://placeimg.com/640/480/any3',
+                            fit: BoxFit.fill,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          elevation: 5,
+                          margin: EdgeInsets.all(5),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Card(
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.network(
+                            'https://placeimg.com/640/480/any2',
+                            fit: BoxFit.fill,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          elevation: 5,
+                          margin: EdgeInsets.all(5),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Card(
+                          semanticContainer: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          child: Image.network(
+                            'https://placeimg.com/640/480/any1',
+                            fit: BoxFit.fill,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          elevation: 5,
+                          margin: EdgeInsets.all(5),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
                         children: [
-                          Icon(
-                            Icons.card_giftcard,
-                            color: Color(0xFFEE829C),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            children: [
+                              Text('Name', style: TextStyle(
+                                  fontSize: 14, color: Colors.black26
+                              ),),
+                              Text('Garima Thakur', style: TextStyle(
+                                  fontSize: 18, color: Colors.black
+                              ),),
+                            ],
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text("Wallet 500 ₹",
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.black)),
                         ],
                       ),
                     ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => EditProfileScreen(),
-                          ),
-                        );
-                      },
-                      child: Column(
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
                         children: [
-                          Icon(
-                            Icons.edit,
-                            color: Color(0xFFEE829C),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            children: [
+                              Text('Date of birth', style: TextStyle(
+                                  fontSize: 14, color: Colors.black26
+                              ),),
+                              Text('12-10-2001', style: TextStyle(
+                                  fontSize: 18, color: Colors.black
+                              ),),
+                            ],
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text("Edit Info",
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.black)),
                         ],
                       ),
                     ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SettingScreen(),
-                          ),
-                        );
-                      },
-                      child: Column(
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
                         children: [
-                          Icon(Icons.settings, color: Color(0xFFEE829C)),
-                          SizedBox(
-                            height: 10,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            children: [
+                              Text('Gender', style: TextStyle(
+                                  fontSize: 14, color: Colors.black26
+                              ),),
+                              Text('Female', style: TextStyle(
+                                  fontSize: 18, color: Colors.black
+                              ),),
+                            ],
                           ),
-                          Text("Setting",
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.black)),
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Interest",style: TextStyle(
+                          fontSize: 14, color: Colors.black26)),
+                          ChipsChoice<String>.multiple(
+                            value: tags,
+                            options: ChipsChoiceOption.listFrom<String, String>(
+                              source: options,
+                              value: (i, v) => v,
+                              label: (i, v) => v,
+                            ),
+                            onChanged: (val) => setState(() => tags = val),
+                            isWrapped: true,
+                          ),
+                        ],
+                      )
+
+                    ),
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Container(
+                      width: double.infinity,
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start  ,
+                              children: [
+                                Text('About', style: TextStyle(
+                                    fontSize: 14, color: Colors.black26
+                                ),),
+
+                                 Text("If you’re really feeling inspired. I am intreasted in hot/sexy ;) chatting and call and looking best friend for trip out for NCR, I like so much hilly area.",
+                                      style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal)),
+
+                              ],
+
+
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            children: [
+                              Text('I like', style: TextStyle(
+                                  fontSize: 14, color: Colors.black26
+                              ),),
+                              Text('Man', style: TextStyle(
+                                  fontSize: 18, color: Colors.black
+                              ),),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(height: 10,),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            children: [
+                              Text('Address', style: TextStyle(
+                                  fontSize: 14, color: Colors.black26
+                              ),),
+                              Text('M-87 Pratap vihar, Ghaziabad UP', style: TextStyle(
+                                  fontSize: 18, color: Colors.black
+                              ),),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                ],
               ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      children: [
-                        Icon(Icons.account_circle),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text("Account",
-                            style:
-                                TextStyle(fontSize: 14, color: Colors.black)),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Icon(Icons.edit),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text("Edit Info",
-                            style:
-                                TextStyle(fontSize: 14, color: Colors.black)),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Icon(Icons.edit),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text("Edit Info",
-                            style:
-                                TextStyle(fontSize: 14, color: Colors.black)),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => WalletRecharge(),
             ),
-          );
-        },
-        label: Text(
-          '₹ Recharge Now',
-          style: TextStyle(fontSize: 20),
+          ),
         ),
-        //icon: Icon(Icons.monetization_on),
-        backgroundColor: Color(0xFFEE829C),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-    );
+        floatingActionButton: new FloatingActionButton(
+            elevation: 0.0,
+            child: new Icon(Icons.edit),
+            backgroundColor: new Color(0xFFE57373),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => EditProfileScreen(),
+                ),
+              );
+            }));
   }
 }

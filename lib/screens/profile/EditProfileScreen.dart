@@ -32,7 +32,73 @@ class _EditProfileScreen extends State<EditProfileScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
         ),
-        child: Text('Update profile'),
+        child: Column(
+          children: [
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Card(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/girl_image.png"),
+                          fit: BoxFit.fitWidth,
+                          alignment: Alignment.topCenter,
+                        ),
+                      ),
+                      child: Row(
+                        //mainAxisAlignment: Main,
+                        children: [
+                          Icon(Icons.close, color: Color(0xFFEE829C),),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Card(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/girl_image.png"),
+                          fit: BoxFit.fitWidth,
+                          alignment: Alignment.topCenter,
+                        ),
+                      ),
+                      child: Text("YOUR TEXT"),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Card(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/girl_image.png"),
+                          fit: BoxFit.fitWidth,
+                          alignment: Alignment.topCenter,
+                        ),
+                      ),
+                      child: Text("YOUR TEXT"),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+          ],
+        )
+
+
+
       ),
 
     );

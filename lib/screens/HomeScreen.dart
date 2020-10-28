@@ -84,8 +84,8 @@ class _HomeScreenState extends State<HomeScreen> {
           }),
       items: [
         BottomNavyBarItem(
-          icon: Icon(Icons.recommend),
-          title: Text('Recommend'),
+          icon: Icon(Icons.home),
+          title: Text('Home'),
           activeColor: Color(0xFFEE829C),
         ),
         BottomNavyBarItem(
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
             title: Text('Chat History'),
             activeColor: Color(0xFFEE829C)),
         BottomNavyBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person_add_alt_1_outlined),
             title: Text('Profile'),
             activeColor: Color(0xFFEE829C)),
       ],

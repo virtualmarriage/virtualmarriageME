@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:virtualmarriageME/screens/EarningScreen.dart';
 import 'package:virtualmarriageME/utils/carouselslider/carousel_slider.dart';
 
 
@@ -258,26 +259,30 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Card(
-                      child: Container(
-                          height: 80,
-                          width: 120,
-                          margin: EdgeInsets.all(10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Total Earning",
-                                  style:
-                                  TextStyle(fontSize: 14, color: Colors.black)),
-                              SizedBox(height: 10,),
-                              Icon(
-                                Icons.money,
-                                color: Color(0xFFEE829C),
-                              ),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => EarningScreen(),),);
+                        },
+                        child: Container(
+                            height: 80,
+                            width: 120,
+                            margin: EdgeInsets.all(10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Total Earning",
+                                    style:
+                                    TextStyle(fontSize: 14, color: Colors.black)),
+                                SizedBox(height: 10,),
+                                Icon(
+                                  Icons.money,
+                                  color: Color(0xFFEE829C),
+                                ),
 
-                                  ],
-
-
-                          )
+                                    ],
+                            )
+                        ),
                       ),
 
                     ),

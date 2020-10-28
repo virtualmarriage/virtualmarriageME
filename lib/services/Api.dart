@@ -10,6 +10,7 @@ import 'package:virtualmarriageME/model/ProductData.dart';
 import 'package:virtualmarriageME/model/UserData.dart';
 import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 import 'package:virtualmarriageME/utils/progressdialog.dart';
+import 'package:virtualmarriageME/model/EarningData.dart';
 
 class Api {
   final String _baseUrl = "http://yogihost.in/fueldynamic/";
@@ -57,6 +58,27 @@ class Api {
     } on Exception {
       progressDialog.hide();
     }
+    return null;
+  }
+
+  Future<List<EarningData>> getEarningList() async {
+    var param = {
+      "api": 'productlist'
+    };
+    String url = _baseUrl;
+    print("REQUEST_URL: " + url + "\nREQUEST: " + param.toString());
+    try {
+      http.Response response = await http.post(url, body: param);
+      if (response.statusCode == 200) {
+        /* var data = json.decode(response.body);
+        PreferenceHelper.saveValueInPreference(keyValue.userData.toString(), json.encode(data['userdata']));*/
+
+        var data = json.decode(response.body);
+        List<EarningData> productList = (data["productlist"] as List<dynamic>).map((values) => EarningData.fromJson(values)).toList();
+        print("RESPONSE_DATA: " + response.body);
+        return productList;
+      }
+    } on Exception {}
     return null;
   }
 

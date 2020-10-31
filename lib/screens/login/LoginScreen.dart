@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:virtualmarriageME/screens/HomeScreen.dart';
+import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/CommonComponent.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 import 'package:virtualmarriageME/utils/progressdialog.dart';
 import 'package:virtualmarriageME/widgets/SubmitButton.dart';
 
@@ -86,9 +88,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   SubmitButton(
                      title: "Login",
-                    act: () async {
+                      act: () async {
                       if (_txtNumber.text.length == 10) {
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),);
+                        Api().login(mobileNo: _txtNumber.text, context: context).then((value) => {
+                            if(value.data!= null) {
+                            PreferenceHelper.saveValueInPreference(keyValue.userData.toString(), value.data.toString()),
+                            setState(() {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),);
+                            })
+                          }
+                        });
+                        //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),);
 
                         /*progressDialog.show();
                         Future.delayed(const Duration(milliseconds: 1500), () {

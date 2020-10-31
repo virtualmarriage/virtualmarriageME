@@ -2,10 +2,13 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:virtualmarriageME/screens/EarningScreen.dart';
 import 'package:virtualmarriageME/screens/HowToUse.dart';
 import 'package:virtualmarriageME/screens/fragment/CallListScreen.dart';
 import 'package:virtualmarriageME/screens/fragment/ChatListScreen.dart';
 import 'package:virtualmarriageME/screens/fragment/ProfileScreen.dart';
+import 'package:virtualmarriageME/screens/leftpanel/AboutUsScreen.dart';
+import 'package:virtualmarriageME/screens/profile/SettingScreen.dart';
 
 import 'fragment/DashboardScreen.dart';
 import 'wallet/WalletTransaction.dart';
@@ -158,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         SizedBox(height: 10,),
                         Text("Garima Thakur",
-                            style: TextStyle(fontSize: 16, color: Colors.black)),
+                            style: TextStyle(fontSize: 18, color: Colors.black)),
                         Text("+91 9999998765",
                             style: TextStyle(fontSize: 14, color: Colors.black)),
 
@@ -182,15 +185,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             flex: 3,
                             child: Container(
                               child: InkWell(
-                                onTap: null,
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) => EarningScreen(),),);
+                                },
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children:<Widget> [
                                     Icon(Icons.monetization_on,
-                                      color: Colors.black,),
+                                      color: Color(0xFFEE829C),),
                                     SizedBox(width: 10,),
                                     Flexible(
-                                      child: Text("Wallet Transactions",
+                                      child: Text("Total Transactions",
                                           maxLines: 2,
                                           style: TextStyle(fontSize: 14, color: Colors.black)),
                                     ),
@@ -214,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
-                  Container(
+                  /*Container(
                     margin: EdgeInsets.all(10),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
@@ -225,14 +231,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(fontSize: 14, color: Colors.black)),
                       ],
                     ),
-                  ),
+                  ),*/
 
                   Container(
                     margin: EdgeInsets.all(10),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children:<Widget> [
-                        Icon(Icons.chat),
+                        Icon(Icons.chat, color: Colors.blue,),
                         SizedBox(width: 10,),
                         Text("Customer Chat Support",
                             style: TextStyle(fontSize: 14, color: Colors.black)),
@@ -247,15 +253,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         Expanded(
                           flex: 1,
                           child: Container(
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children:<Widget> [
-                                Icon(Icons.star,
-                                  color: Colors.blue,),
-                                SizedBox(width: 10,),
-                                Text("Free Services ",
-                                    style: TextStyle(fontSize: 14, color: Colors.black)),
-                              ],
+                            child: InkWell(
+                              onTap: (){
+                                openWebsite(context);
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children:<Widget> [
+                                  Icon(Icons.web,
+                                    color: Color(0xFFEE829C),),
+                                  SizedBox(width: 10,),
+                                  Text("Website ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black)),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -314,7 +325,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           flex: 1,
                           child: InkWell(
                             onTap: (){
-                              _launchURL(context);
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => AboutUsScreen(),),);
                             },
                             child: Container(
                               child: Row(
@@ -376,57 +388,74 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   Container(
                     margin: EdgeInsets.all(10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children:<Widget> [
-                        Icon(Icons.settings,
-                          color: Colors.black,),
-                        SizedBox(width: 10,),
-                        Text("Setting",
-                            style: TextStyle(fontSize: 14, color: Colors.black)),
-                      ],
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => SettingScreen(),),);
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children:<Widget> [
+                          Icon(Icons.settings,
+                            color: Color(0xFFEE829C),),
+                          SizedBox(width: 10,),
+                          Text("Setting",
+                              style: TextStyle(fontSize: 14, color: Colors.black)),
+                        ],
+                      ),
                     ),
                   ),
 
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
                       child:Text('Also availble on',
-                          style: TextStyle(fontSize: 12, color: Colors.black))
+                          style: TextStyle(fontSize: 14, color: Colors.black))
                   ),
 
                   Container(
-                    margin: EdgeInsets.all(5),
                     child: Row(
-                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children:<Widget> [
-                        Expanded(
-                          child: Icon(Icons.language,
-                            color: Colors.teal,),
+                        //AssetImage("assets/girl_image.png")
+                        IconButton(
+                          icon: new Image.asset('assets/leftpanel/ic_facebook.png',
+                          width: 20, height: 20,),
+                          tooltip: 'Closes application',
+                          onPressed: () {
+                            }
                         ),
-                        Expanded(
-                          child: Icon(Icons.image,
-                            color: Colors.redAccent,),
+                        IconButton(
+                            icon: new Image.asset('assets/leftpanel/ic_youtube.png',
+                              width: 20, height: 20,),
+                            tooltip: 'Closes application',
+                            onPressed: () {
+                            }
                         ),
-                        Expanded(
-                          child: Icon(Icons.chat,
-                            color: Colors.blue,),
+                        IconButton(
+                            icon: new Image.asset('assets/leftpanel/ic_twitter.png',
+                              width: 20, height: 20,),
+                            tooltip: 'Closes application',
+                            onPressed: () {
+                            }
                         ),
-                        Expanded(
-                          child: Icon(Icons.star,
-                            color: Colors.green,),
+                        IconButton(
+                            icon: new Image.asset('assets/leftpanel/ic_linkedin.png',
+                              width: 20, height: 20,),
+                            tooltip: 'Closes application',
+                            onPressed: () {
+                            }
                         ),
-                        Expanded(
-                          child: Icon(Icons.language,
-                            color: Colors.blueGrey,),
+                        IconButton(
+                            icon: new Image.asset('assets/leftpanel/ic_pinterest.png',
+                              width: 20, height: 20,),
+                            tooltip: 'Closes application',
+                            onPressed: () {
+                            }
                         ),
-                        Expanded(
-                          child: Icon(Icons.nature,
-                            color: Colors.lime,),
-                        ),
-                        Expanded(
-                          child: Icon(Icons.local_laundry_service,
-                            color: Colors.indigoAccent,),
-                        ),
+
+
+
 
 
                       ],
@@ -436,7 +465,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                       margin: EdgeInsets.all(0),
                       child:Text('Follow us & we will follow you back :)',
-                          style: TextStyle(fontSize: 12, color: Colors.black))
+                          style: TextStyle(fontSize: 14, color: Colors.black))
                   ),
 
                   Container(
@@ -453,6 +482,26 @@ class _HomeScreenState extends State<HomeScreen> {
           );
   }
 
+  void openWebsite(BuildContext context) async {
+    try {
+      await launch('https://virtualmarriage.me',
+        option: new CustomTabsOption(
+          toolbarColor: Theme.of(context).primaryColor,
+          enableDefaultShare: true,
+          enableUrlBarHiding: true,
+          showPageTitle: true,
+          animation: new CustomTabsAnimation.slideIn(),
+          extraCustomTabs: <String>[
+            'org.mozilla.firefox',
+            'com.microsoft.emmx',
+          ],
+        ),
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
+
   void openVMBlog(BuildContext context) async {
     try {
       await launch('https://virtualmarriage.me/blog/',
@@ -462,11 +511,8 @@ class _HomeScreenState extends State<HomeScreen> {
           enableUrlBarHiding: true,
           showPageTitle: true,
           animation: new CustomTabsAnimation.slideIn(),
-
           extraCustomTabs: <String>[
-            // ref. https://play.google.com/store/apps/details?id=org.mozilla.firefox
             'org.mozilla.firefox',
-            // ref. https://play.google.com/store/apps/details?id=com.microsoft.emmx
             'com.microsoft.emmx',
           ],
         ),

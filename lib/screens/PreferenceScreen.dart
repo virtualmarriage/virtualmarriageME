@@ -18,7 +18,7 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
     super.initState();
     sampleData.add(new RadioModel(false, 'Women', 'assets/icon_female.png'));
     sampleData.add(new RadioModel(false, 'Man', 'assets/icon_male.png'));
-    sampleData.add(new RadioModel(false, 'Hidden', 'assets/icon_female.png'));
+    sampleData.add(new RadioModel(false, 'Other', 'assets/icon_female.png'));
   }
 
   @override
@@ -68,7 +68,7 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
                                         }else if(index == 1){
                                           radioItem = "Man";
                                         }else if(index == 2){
-                                          radioItem = "Hidden";
+                                          radioItem = "Other";
                                         }
                                       });
                                     },

@@ -176,10 +176,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start  ,
                             children: [
-                              Text('Date of birth', style: TextStyle(
+                              Text('Age (in year)', style: TextStyle(
                                   fontSize: 14, color: Colors.black26
                               ),),
-                              Text('12-10-2001', style: TextStyle(
+                              Text('24', style: TextStyle(
                                   fontSize: 18, color: Colors.black
                               ),),
                             ],
@@ -270,7 +270,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start  ,
                             children: [
-                              Text('I like', style: TextStyle(
+                              Text('I like to talk.', style: TextStyle(
                                   fontSize: 14, color: Colors.black26
                               ),),
                               Text('Man', style: TextStyle(

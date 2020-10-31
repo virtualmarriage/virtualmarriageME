@@ -262,15 +262,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         Expanded(
                           flex: 1,
                           child: Container(
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children:<Widget> [
-                                Icon(Icons.beenhere,
-                                  color: Colors.deepOrange,),
-                                SizedBox(width: 10,),
-                                Text("Blogs ",
-                                    style: TextStyle(fontSize: 14, color: Colors.black)),
-                              ],
+                            child: InkWell(
+                              onTap: (){
+                                openVMBlog(context);
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children:<Widget> [
+                                  Icon(Icons.beenhere,
+                                    color: Colors.deepOrange,),
+                                  SizedBox(width: 10,),
+                                  Text("Blogs ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black)),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -448,6 +453,29 @@ class _HomeScreenState extends State<HomeScreen> {
           );
   }
 
+  void openVMBlog(BuildContext context) async {
+    try {
+      await launch('https://virtualmarriage.me/blog/',
+        option: new CustomTabsOption(
+          toolbarColor: Theme.of(context).primaryColor,
+          enableDefaultShare: true,
+          enableUrlBarHiding: true,
+          showPageTitle: true,
+          animation: new CustomTabsAnimation.slideIn(),
+
+          extraCustomTabs: <String>[
+            // ref. https://play.google.com/store/apps/details?id=org.mozilla.firefox
+            'org.mozilla.firefox',
+            // ref. https://play.google.com/store/apps/details?id=com.microsoft.emmx
+            'com.microsoft.emmx',
+          ],
+        ),
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
+
   void _launchURL(BuildContext context) async {
     try {
       await launch(
@@ -478,6 +506,8 @@ class _HomeScreenState extends State<HomeScreen> {
     debugPrint(e.toString());
     }
   }
+
+
 }
 
 

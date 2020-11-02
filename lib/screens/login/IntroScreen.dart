@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:virtualmarriageME/model/IntroSliderModel.dart';
-import 'package:virtualmarriageME/screens/HowToUse.dart';
 import 'package:virtualmarriageME/screens/splashScreen.dart';
 import 'package:virtualmarriageME/utils/HexColor.dart';
 import 'package:virtualmarriageME/utils/PreferenceHelper.dart';

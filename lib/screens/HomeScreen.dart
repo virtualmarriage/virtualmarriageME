@@ -220,19 +220,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
-                  /*Container(
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children:<Widget> [
-                        Icon(Icons.history),
-                        SizedBox(width: 10,),
-                        Text("Order History",
-                            style: TextStyle(fontSize: 14, color: Colors.black)),
-                      ],
-                    ),
-                  ),*/
-
                   Container(
                     margin: EdgeInsets.all(10),
                     child: Row(
@@ -243,6 +230,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text("Customer Chat Support",
                             style: TextStyle(fontSize: 14, color: Colors.black)),
                       ],
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => SettingScreen(),),);
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children:<Widget> [
+                          Icon(Icons.settings,
+                            color: Color(0xFFEE829C),),
+                          SizedBox(width: 10,),
+                          Text("Settings",
+                              style: TextStyle(fontSize: 14, color: Colors.black)),
+                        ],
+                      ),
                     ),
                   ),
 
@@ -261,7 +268,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisSize: MainAxisSize.max,
                                 children:<Widget> [
                                   Icon(Icons.web,
-                                    color: Color(0xFFEE829C),),
+                                    color:Colors.green,),
                                   SizedBox(width: 10,),
                                   Text("Website ",
                                       style: TextStyle(fontSize: 14, color: Colors.black)),
@@ -390,16 +397,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     margin: EdgeInsets.all(10),
                     child: InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => SettingScreen(),),);
+
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children:<Widget> [
-                          Icon(Icons.settings,
-                            color: Color(0xFFEE829C),),
+                          Icon(Icons.logout,
+                            color: Colors.black,),
                           SizedBox(width: 10,),
-                          Text("Setting",
+                          Text("Logout",
                               style: TextStyle(fontSize: 14, color: Colors.black)),
                         ],
                       ),
@@ -471,7 +477,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                       margin: EdgeInsets.all(20),
                       child:Text('Version: 1.0.0',
-                          style: TextStyle(fontSize: 16, color: Colors.black))
+                          style: TextStyle(fontSize: 16, color: Colors.green))
                   ),
 
                 ],

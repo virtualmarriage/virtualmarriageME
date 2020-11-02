@@ -62,6 +62,9 @@ class _AboutUsScreen extends State<AboutUsScreen> {
                         SizedBox(height: 20,),
                         Text("Skype Id", style: TextStyle(fontSize: 18, color: Colors.black),),
                         Text("virtualmarriage", style: TextStyle(fontSize: 14, color: Colors.black),),
+                        SizedBox(height: 20,),
+                        Text("Website", style: TextStyle(fontSize: 18, color: Colors.black),),
+                        Text("https://virtualmarriage.me", style: TextStyle(fontSize: 14, color: Colors.black),),
                       ],
                     )
                 ),

@@ -453,6 +453,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             }
                         ),
                         IconButton(
+                            icon: new Image.asset('assets/leftpanel/ic_instagram.png',
+                              width: 20, height: 20,),
+                            tooltip: 'Closes application',
+                            onPressed: () {
+                            }
+                        ),
+                        IconButton(
                             icon: new Image.asset('assets/leftpanel/ic_pinterest.png',
                               width: 20, height: 20,),
                             tooltip: 'Closes application',

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>945415389178-4ftudbrd2iftnaf7e4vilm19gavc7psk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.945415389178-4ftudbrd2iftnaf7e4vilm19gavc7psk</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>945415389178-5vbev4jkk2qmpn15pfcqe0cvl7kabd08.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCvfdlmwI_d00NbgHLHM2vr9LWLCE0GyWI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>945415389178</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.virtualmarriage.me</string>
+	<key>PROJECT_ID</key>
+	<string>virtualmarriage-2020</string>
+	<key>STORAGE_BUCKET</key>
+	<string>virtualmarriage-2020.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:945415389178:ios:a34becc2effed9c4796e43</string>
+	<key>DATABASE_URL</key>
+	<string>https://virtualmarriage-2020.firebaseio.com</string>
+</dict>
+</plist>

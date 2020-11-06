@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "945415389178",
+    "firebase_url": "https://virtualmarriage-2020.firebaseio.com",
+    "project_id": "virtualmarriage-2020",
+    "storage_bucket": "virtualmarriage-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945415389178:android:963d2e57f68dc89b796e43",
+        "android_client_info": {
+          "package_name": "com.virtualmarriage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945415389178-5vbev4jkk2qmpn15pfcqe0cvl7kabd08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virtualmarriage",
+            "certificate_hash": "38fde17478a57623eebf2de8fef12f177c4d45a3"
+          }
+        },
+        {
+          "client_id": "945415389178-e06m6c3di0ijfggfouip5pgopobu4v9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWkZUM41XUiUAiUbJdp9thazd-TQ108WQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945415389178-e06m6c3di0ijfggfouip5pgopobu4v9v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "945415389178-ijdpfe0mabnrghgdasf7bulfmud1m50s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.virtualmarriage.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945415389178:android:a188a5528a9096b9796e43",
+        "android_client_info": {
+          "package_name": "com.virtualmarriageme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945415389178-e06m6c3di0ijfggfouip5pgopobu4v9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWkZUM41XUiUAiUbJdp9thazd-TQ108WQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945415389178-e06m6c3di0ijfggfouip5pgopobu4v9v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "945415389178-ijdpfe0mabnrghgdasf7bulfmud1m50s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.virtualmarriage.user"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

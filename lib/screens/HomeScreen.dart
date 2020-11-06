@@ -10,8 +10,12 @@ import 'package:virtualmarriageME/screens/fragment/ProfileScreen.dart';
 import 'package:virtualmarriageME/screens/leftpanel/AboutUsScreen.dart';
 import 'package:virtualmarriageME/screens/profile/SettingScreen.dart';
 
+import 'chat/chat.dart';
 import 'fragment/DashboardScreen.dart';
 import 'wallet/WalletTransaction.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -20,6 +24,38 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+
+    registerUserWithFirebase();
+  }
+
+  Future<void> registerUserWithFirebase() async {
+    final QuerySnapshot result = await FirebaseFirestore.instance
+        .collection('users')
+        .where('id', isEqualTo: 'WpKGYBdPc8euGDQhkzcOpJd8XLI2')
+        .get();
+    final List<DocumentSnapshot> documents = result.docs;
+    if (documents.length == 0) {
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc('WpKGYBdPc8euGDQhkzcOpJd8XLI2')
+          .set({
+        'nickname': 'Soni Rawat',
+        'photoUrl': 'https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI',
+        'id': 'WpKGYBdPc8euGDQhkzcOpJd8XLI2',
+        'createdAt': DateTime.now().millisecondsSinceEpoch.toString(),
+        'chattingWith': null
+      });
+    } else {
+      print('User ${documents[0].data()['nickname']} with id ${documents[0].data()['id']} already exist.');
+    }
+
+
+  }
+
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 

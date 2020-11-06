@@ -6,6 +6,7 @@ import 'package:virtualmarriageME/model/IntroSliderModel.dart';
 import 'package:virtualmarriageME/screens/splashScreen.dart';
 import 'package:virtualmarriageME/utils/HexColor.dart';
 import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 class IntroScreen extends StatefulWidget {
@@ -51,9 +52,16 @@ class _HomeState extends State<Home> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    init();
     mySLides = getSlides();
     controller = new PageController();
   }
+
+  void init() async{
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+  }
+
 
   @override
   Widget build(BuildContext context) {

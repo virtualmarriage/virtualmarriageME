@@ -1,8 +1,8 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:virtualmarriageME/model/ProductData.dart';
+import 'package:virtualmarriageME/screens/chat/chat.dart';
 import 'package:virtualmarriageME/screens/profile/ProfileDetailScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/CommonComponent.dart';
@@ -26,6 +26,10 @@ class _ChatListScreenState extends State<ChatListScreen> {
     _future = Api().getProductList();
   }
 
+  navigateToChatScreen(BuildContext context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Chat(peerId: '12345', peerAvatar: 'https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI',)));
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -42,8 +46,14 @@ class _ChatListScreenState extends State<ChatListScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              InkWell(
+                onTap: (){
+                  navigateToChatScreen(context);
+                },
+                child: Text('Chat Now'),
+              )
               //Categories(),
-              Expanded(
+             /* Expanded(
                 child: FutureBuilder<List<ProductData>>(
                   future: _future,
                   builder: (context, snapshot) {
@@ -57,7 +67,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
                         : Center(child: CommonComponent.circularProgress());
                   },
                 ),
-              ),
+              )*/,
             ],
           )
       ),

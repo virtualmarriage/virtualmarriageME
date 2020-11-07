@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ import 'package:virtualmarriageME/model/EarningData.dart';
 import 'package:dio/dio.dart';
 
 class Api {
-  final String _baseUrl = "https://virtualmarriage.me/api/v1/serviceProvider/";
+  final String _baseUrl = "https://virtualmarriage.me/portal/api/v1/serviceProvider/";
   ProgressDialog progressDialog;
 
   Future<UserResponse> login({@required String mobileNo, @required BuildContext context}) async {
@@ -25,7 +26,36 @@ class Api {
         "mobile": "$mobileNo",
       });
       print('Request: ${formData.fields}');
-      Response response = await Dio().post("${_baseUrl}login/", data: formData);
+
+      Dio dio = new Dio();
+      Response response = await dio.post("${_baseUrl}login/", data: formData);
+      print(response);
+      progressDialog.hide();
+      return UserResponse.fromJson(response.data);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
+  }
+
+  Future<UserResponse> verifyOtp({@required String otp, @required BuildContext context}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Verifying account...');
+    progressDialog.show();
+    try {
+      FormData formData = new FormData.fromMap({
+        "otp": "$otp",
+      });
+      print('Request: ${formData.fields}');
+
+      Dio dio = new Dio();
+      dio.options.headers['content-Type'] = 'application/json';
+      dio.options.headers["Authorization"] = token;
+      Response response = await dio.post("${_baseUrl}otp/", data: formData);
       print(response);
       progressDialog.hide();
       return UserResponse.fromJson(response.data);

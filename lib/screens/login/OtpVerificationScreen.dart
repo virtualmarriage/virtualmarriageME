@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:virtualmarriageME/services/Api.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 import 'package:virtualmarriageME/utils/codeinput.dart';
 import 'package:virtualmarriageME/utils/progressdialog.dart';
 import 'package:virtualmarriageME/screens/PreferenceScreen.dart';
@@ -11,11 +13,9 @@ class OtpVerificationScreen extends StatefulWidget {
 }
 
 class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
-  ProgressDialog pr;
+
   @override
   Widget build(BuildContext context) {
-    pr = new ProgressDialog(context, ProgressDialogType.Normal);
-    pr.setMessage('Verifying account...');
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -48,13 +48,11 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                       builder: CodeInputBuilders.darkCircle(),
                       onFilled: (value) async {
                         print('Your input is $value.');
-                        pr.show();
-                        Future.delayed(const Duration(milliseconds: 1500), () {
-                          setState(() {
-                            pr.hide();
-                            //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PreferenceScreen()),);
-                          });
+                        Api().verifyOtp(otp: value, context: context).then((value) => {
+                          if(value.data!= null) {
+                            PreferenceHelper.saveProfileData(value.data),
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => PreferenceScreen(),),)
+                          }
                         });
                       },
                     ),
@@ -68,7 +66,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   ),
                   GestureDetector(
                     onTap: () => {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),),
+                      //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),),
                     },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 4.0),

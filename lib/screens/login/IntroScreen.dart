@@ -15,6 +15,12 @@ class IntroScreen extends StatefulWidget {
 }
 
   class _IntroScreenState extends State<IntroScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -140,7 +146,7 @@ class _HomeState extends State<Home> {
           ),
         ): InkWell(
           onTap: (){
-            PreferenceHelper.saveValueInPreference(keyValue.showIntro.toString(), "true");
+            PreferenceHelper.saveValueInPreference(keyValue.showIntro.toString(), "false");
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SplashScreen(),),);
             //Navigator.push(context, MaterialPageRoute(builder: (context) => HowToUse(),),);
           },

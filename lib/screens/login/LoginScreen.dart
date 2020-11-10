@@ -91,14 +91,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       act: () async {
                       if (_txtNumber.text.length == 10) {
                         Api().login(mobileNo: _txtNumber.text, context: context).then((value) => {
-                            if(value.data!= null) {
-                            PreferenceHelper.saveValueInPreference(keyValue.userData.toString(), value.data.toString()),
-                            setState(() {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),);
-                            })
+                          if(value.data!= null) {
+                            PreferenceHelper.saveProfileData(value.data),
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),)
                           }
                         });
-                        //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OtpVerificationScreen(),),);
 
                         /*progressDialog.show();
                         Future.delayed(const Duration(milliseconds: 1500), () {
@@ -136,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       leading: new IconButton(
           icon: new Icon(Icons.arrow_back_ios, color: Colors.black),
-          onPressed: () => Navigator.pop(context)),
+          onPressed: () => Navigator.of(context)),
       backgroundColor: Colors.white,
     );
   }

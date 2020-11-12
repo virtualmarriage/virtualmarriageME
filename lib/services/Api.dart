@@ -59,9 +59,38 @@ class Api {
       dio.options.headers["token"] = token;
       Response response = await dio.post("${_baseUrl}otp/", data: formData);
       print('Response: $response');
-      //print('Response 1: ${response.data}');
       progressDialog.hide();
-      return UserResponse.fromJson(response.data);
+      Map jsonMap = jsonDecode(response.data);
+      return UserResponse.fromJson(jsonMap);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
+  }
+
+  Future<UserResponse> updateProfile({@required String name, @required String age, @required String gender, @required BuildContext context}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Updating Profile...');
+    progressDialog.show();
+    try {
+      FormData formData = new FormData.fromMap({
+        "name": "$name",
+        "age": "$age",
+        "gender": "$gender",
+      });
+      print('Request: ${formData.fields}');
+
+      Dio dio = new Dio();
+      dio.options.headers["token"] = token;
+      Response response = await dio.post("${_baseUrl}updateprofile/", data: formData);
+      print('Response: $response');
+      progressDialog.hide();
+      Map jsonMap = jsonDecode(response.data);
+      return UserResponse.fromJson(jsonMap);
     } catch (error, stacktrace) {
       progressDialog.hide();
       CommonComponent.showToast('$error');

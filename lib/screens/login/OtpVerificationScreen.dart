@@ -50,8 +50,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                         print('Your input is $value.');
                         Api().verifyOtp(otp: '$value', context: context).then((value) => {
                           if(value.status && value.data!= null) {
-                            //PreferenceHelper.saveProfileData(value.data),
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => PreferenceScreen(),),)
+                            PreferenceHelper.saveProfileData(value.data),
+                            if(value.data.name == null){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => PreferenceScreen(),),)
+                            } else {
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),)
+                            }
                           }
                         });
                       },

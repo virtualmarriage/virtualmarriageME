@@ -24,7 +24,9 @@ class PreferenceHelper {
     saveValueInPreference(keyValue.gender.toString(), userData.gender);
     saveValueInPreference(keyValue.callStatus.toString(), userData.callStatus);
     saveValueInPreference(keyValue.chatStatus.toString(), userData.chatStatus);
-    saveValueInPreference(keyValue.token.toString(), userData.token);
+    if(userData.token !=null) {
+      saveValueInPreference(keyValue.token.toString(), userData.token);
+    }
   }
 
   /*static Future<UserData> getUserData() async {

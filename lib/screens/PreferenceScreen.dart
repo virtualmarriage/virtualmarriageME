@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:virtualmarriageME/screens/HomeScreen.dart';
+import 'package:virtualmarriageME/services/Api.dart';
 
 class PreferenceScreen extends StatefulWidget {
   @override
@@ -11,6 +12,8 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
   String radioItem = '';
   List<RadioModel> sampleData = new List<RadioModel>();
   var fullname = TextEditingController();
+  final nameController = TextEditingController();
+  final ageController = TextEditingController();
 
   @override
   void initState() {
@@ -82,6 +85,7 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
                       SizedBox(height: 20,),
 
                       TextFormField(
+                        controller: nameController,
                         decoration: new InputDecoration(
                           labelText: "Enter Name",
                           fillColor: Colors.white,
@@ -109,6 +113,7 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
                       ),
                       SizedBox(height: 20,),
                       TextFormField(
+                        controller: ageController,
                         decoration: new InputDecoration(
                           labelText: "Enter Age",
                           fillColor: Colors.white,
@@ -134,8 +139,6 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
                           fontFamily: "Poppins",
                         ),
                       ),
-
-
                       SizedBox(height: 40,),
                       Container(
                           height: 50,
@@ -150,9 +153,13 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
                             child: Text('Continue',
                               style: TextStyle(fontSize: 22),),
                             onPressed: () {
-
                               print("pressed---$radioItem");
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
+                              Api().updateProfile(name: '${nameController.text}', age: '${ageController.text}',gender: '$radioItem', context: context).then((value) => {
+                                if(value.status && value.data!= null) {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()),)
+                                }
+                              });
+                              //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
                             },
                           )),
                     ],

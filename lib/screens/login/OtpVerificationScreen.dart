@@ -48,9 +48,9 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                       builder: CodeInputBuilders.darkCircle(),
                       onFilled: (value) async {
                         print('Your input is $value.');
-                        Api().verifyOtp(otp: value, context: context).then((value) => {
-                          if(value.data!= null) {
-                            PreferenceHelper.saveProfileData(value.data),
+                        Api().verifyOtp(otp: '$value', context: context).then((value) => {
+                          if(value.status && value.data!= null) {
+                            //PreferenceHelper.saveProfileData(value.data),
                             Navigator.push(context, MaterialPageRoute(builder: (context) => PreferenceScreen(),),)
                           }
                         });

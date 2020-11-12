@@ -8,7 +8,8 @@ class UserResponse {
   UserResponse.fromJson(Map map) {
     status = map['status'];
     error = map['error'];
-    data =  UserData.fromJson(map['data']);
+    //data =  UserData.fromJson(map['data']);
+    data =  map['data'] != null ?  UserData.fromJson(map['data']) : null;
   }
 }
 

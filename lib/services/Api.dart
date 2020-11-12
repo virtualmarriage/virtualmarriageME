@@ -24,6 +24,8 @@ class Api {
     try {
       FormData formData = new FormData.fromMap({
         "mobile": "$mobileNo",
+        "deviceType": Platform.isAndroid ? 1 : 2,
+        "deviceToken": '1234567890',
       });
       print('Request: ${formData.fields}');
 
@@ -53,10 +55,11 @@ class Api {
       print('Request: ${formData.fields}');
 
       Dio dio = new Dio();
-      dio.options.headers['content-Type'] = 'application/json';
-      dio.options.headers["Authorization"] = token;
+      //dio.options.headers['Content-Type'] = 'application/json';
+      dio.options.headers["token"] = token;
       Response response = await dio.post("${_baseUrl}otp/", data: formData);
-      print(response);
+      print('Response: $response');
+      //print('Response 1: ${response.data}');
       progressDialog.hide();
       return UserResponse.fromJson(response.data);
     } catch (error, stacktrace) {

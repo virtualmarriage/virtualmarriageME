@@ -1,11 +1,11 @@
 # This is a generated file; do not edit or check into version control.
 agora_rtc_engine=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/agora_rtc_engine-1.0.5/
-cloud_firestore=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.2/
-cloud_firestore_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.0+5/
-firebase_auth=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.18.2/
-firebase_auth_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.3.1+2/
-firebase_core=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.1/
-firebase_core_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.0/
+cloud_firestore=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.3/
+cloud_firestore_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.1/
+firebase_auth=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.18.3/
+firebase_auth_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.3.2/
+firebase_core=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.2/
+firebase_core_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1/
 firebase_messaging=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-7.0.0/
 firebase_storage=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-4.0.1/
 flutter_custom_tabs=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_custom_tabs-0.6.0/
@@ -14,7 +14,7 @@ flutter_plugin_android_lifecycle=/Users/shiva/Library/Android/flutter/.pub-cache
 fluttertoast=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-4.0.1/
 google_sign_in=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.6/
 google_sign_in_web=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.2/
-image_picker=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+12/
+image_picker=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+14/
 path_provider=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.24/
 path_provider_linux=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/
 path_provider_macos=/Users/shiva/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+6/

@@ -2,7 +2,9 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:virtualmarriageME/screens/HomeScreen.dart';
 import 'package:virtualmarriageME/screens/login/LoginScreen.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -13,7 +15,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => LoginScreen())));
+    PreferenceHelper.getToken().then((value) => {
+      print('Token: $value'),
+      if(value == null || value == 'null'){
+        Timer(Duration(seconds: 3), () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => LoginScreen())))
+      } else {
+        Timer(Duration(seconds: 3), () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => HomeScreen())))
+      }
+    });
   }
 
   @override

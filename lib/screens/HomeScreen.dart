@@ -2,6 +2,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:virtualmarriageME/model/UserResponse.dart';
 import 'package:virtualmarriageME/screens/EarningScreen.dart';
 import 'package:virtualmarriageME/screens/HowToUse.dart';
 import 'package:virtualmarriageME/screens/fragment/CallListScreen.dart';
@@ -9,9 +10,11 @@ import 'package:virtualmarriageME/screens/fragment/ChatListScreen.dart';
 import 'package:virtualmarriageME/screens/fragment/ProfileScreen.dart';
 import 'package:virtualmarriageME/screens/leftpanel/AboutUsScreen.dart';
 import 'package:virtualmarriageME/screens/profile/SettingScreen.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 
 import 'chat/chat.dart';
 import 'fragment/DashboardScreen.dart';
+import 'login/LoginScreen.dart';
 import 'wallet/WalletTransaction.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -24,11 +27,17 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+  UserData userData;
 
   @override
   void initState() {
     super.initState();
 
+    PreferenceHelper.getUserProfile().then((value) => {
+      setState(() {
+        userData = value;
+      })
+    });
     registerUserWithFirebase();
   }
 
@@ -196,9 +205,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                         ),
                         SizedBox(height: 10,),
-                        Text("Garima Thakur",
+                        Text('${userData.name}',
                             style: TextStyle(fontSize: 18, color: Colors.black)),
-                        Text("+91 9999998765",
+                        Text("+91 ${userData.mobile}",
                             style: TextStyle(fontSize: 14, color: Colors.black)),
 
                       ],
@@ -432,17 +441,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                     margin: EdgeInsets.all(10),
                     child: InkWell(
-                      onTap: (){
-
+                      onTap: () {
+                        PreferenceHelper.clearPreference();
+                        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => LoginScreen()), (Route<dynamic> route) => false);
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children:<Widget> [
-                          Icon(Icons.logout,
-                            color: Colors.black,),
+                          Icon(Icons.logout, color: Colors.black,),
                           SizedBox(width: 10,),
-                          Text("Logout",
-                              style: TextStyle(fontSize: 14, color: Colors.black)),
+                          Text("Logout", style: TextStyle(fontSize: 14, color: Colors.black)),
                         ],
                       ),
                     ),
@@ -450,8 +458,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                      child:Text('Also availble on',
-                          style: TextStyle(fontSize: 14, color: Colors.black))
+                      child:Text('Also availble on', style: TextStyle(fontSize: 14, color: Colors.black))
                   ),
 
                   Container(

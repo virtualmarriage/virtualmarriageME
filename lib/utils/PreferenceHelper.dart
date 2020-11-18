@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:virtualmarriageME/model/UserResponse.dart';
 
@@ -24,16 +22,10 @@ class PreferenceHelper {
     saveValueInPreference(keyValue.gender.toString(), userData.gender);
     saveValueInPreference(keyValue.callStatus.toString(), userData.callStatus);
     saveValueInPreference(keyValue.chatStatus.toString(), userData.chatStatus);
-    if(userData.token !=null) {
+    if (userData.token != null) {
       saveValueInPreference(keyValue.token.toString(), userData.token);
     }
   }
-
-  /*static Future<UserData> getUserData() async {
-    var value = await getValueFromPreference(keyValue.userData.toString());
-    UserData user = value == null? null: UserData.fromJson(json.decode(value.toString()));
-    return user;
-  }*/
 
   static Future<String> getCategoryId(String key) async {
     var value = await getValueFromPreference(key);
@@ -45,7 +37,27 @@ class PreferenceHelper {
     return value.toString();
   }
 
-  clearPreference() async {
+  static Future<UserData> getUserProfile() async {
+    var name = await getValueFromPreference(keyValue.name.toString());
+    var mobile = await getValueFromPreference(keyValue.mobile.toString());
+    UserData user = new UserData();
+    user.name = name;
+    user.mobile = mobile;
+    //UserData user = value == null? null: UserData.fromJson(json.decode(value.toString()));
+    return user;
+  }
+
+  static Future<String> getName() async {
+    var value = await getValueFromPreference(keyValue.name.toString());
+    return value.toString();
+  }
+
+  static Future<String> getMobileNo() async {
+    var value = await getValueFromPreference(keyValue.mobile.toString());
+    return value.toString();
+  }
+
+  static clearPreference() async {
     final prefs = await SharedPreferences.getInstance();
     prefs.remove(keyValue.id.toString());
     prefs.remove(keyValue.token.toString());

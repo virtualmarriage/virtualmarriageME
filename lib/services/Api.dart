@@ -99,6 +99,17 @@ class Api {
     }
   }
 
+/*
+  Future<String> uploadPhoto(File file) async {
+    String fileName = file.path.split('/').last;
+    FormData formData = FormData.fromMap({
+      "file":
+      await MultipartFile.fromFile(file.path, filename:fileName),
+    });
+    response = await dio.post("/info", data: formData);
+    return response.data['id'];
+  }
+*/
 
   Future<List<ProductData>> getProductList() async {
     var param = {

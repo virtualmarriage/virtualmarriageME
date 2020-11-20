@@ -1,34 +1,38 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
-INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
-INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
-INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
-MERGED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
-MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:fluttertoast] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:sqflite] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
+INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
+INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
+INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
+MERGED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
 MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-20:12
-MERGED from [:flutter_custom_tabs] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_custom_tabs/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
-MERGED from [:path_provider] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:flutter_local_notifications] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:flutter_local_notifications] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_image_compress] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_image_compress/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_custom_tabs] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_custom_tabs/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:image_cropper] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_cropper/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:permission_handler] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-20:12
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:fluttertoast] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
+MERGED from [:path_provider] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:17:1-42:12
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f4318b834405921e87d6b24ed175996c/ucrop-2.2.6/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/701c33591765b03ec8ed51d702bd262d/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/bfa8c1bb13450d44a2c5600822ac3420/jetified-play-services-auth-16.0.1/AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3797210526498783b10551402a1fe0ba/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1815d939eb526de30de2b6c9c70bd3b0/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-messaging:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/500fe7fea42505fae252c59410e39238/jetified-firebase-messaging-20.3.0/AndroidManifest.xml:17:1-45:12
 MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3797210526498783b10551402a1fe0ba/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1815d939eb526de30de2b6c9c70bd3b0/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-iid:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/15e27f388fa6d874488dbe33bfb5f19c/firebase-iid-20.3.0/AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ae3c1578debcad49d0a6c8743b24abc8/play-services-cloud-messaging-16.0.0/AndroidManifest.xml:2:1-13:12
@@ -62,19 +66,24 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shiva/.gradle/caches/tra
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d10fe1176fa5480b064486ece15f99c1/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/28c8df72e3e98cf2af337943db219b6d/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/5a1de8d3594afca67ad230d5d25a73b9/activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d255798b3263f4a3c8e304b7de4de531/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0-rc01] /Users/shiva/.gradle/caches/transforms-2/files-2.1/005b1c488f0d5e9f3ba6a8259f041c2d/transition-1.2.0-rc01/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/6af37b0dc18acadfaf8b0344ec157d66/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d255798b3263f4a3c8e304b7de4de531/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3008a15222323dd0393f3314747b2d3a/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/31cd047ed3ec37dce69ba9f16e10a05d/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f266002780b6f62ae73a8842bc10a810/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/5a5d53679d914b768463e606a8e8f920/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/2ecca17b0eb70fcbc1e9d8148641257d/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/a5b8095803802f17607f1ac359c588fa/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/06d80eb16b557b026bc1ef456724990c/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/35f29bb1a578f0319e9c3e21730b6b49/core-1.2.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/00db72760b3662c4528b816b17c43995/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/13eb812daeca5edd5883d98298d1a9d8/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/82b463c8584fb88ea5a1f562d740c4b7/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/a78ce9b49fd39a3eac90624d04d1ee8a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d1aef1559ce6f8e93cc37974cafbe821/heifwriter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ffbc01c62758e32dfc06aa0e80ac9b1e/exifinterface-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3bf5fc05ca184d01c3bed36c84f7c6c7/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d51e0220d8e43d4bfbf3a1c4895b8a97/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
@@ -99,18 +108,38 @@ INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debu
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-49:12
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:1-59:12
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:8:5-81
+MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-81
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:9:5-80
+MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.CAMERA
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:10:5-65
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-65
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:10:22-62
 uses-permission#android.permission.INTERNET
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:8:5-66
-MERGED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:8:5-66
-MERGED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:8:5-66
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:11:5-66
+MERGED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:11:5-66
+MERGED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:11:5-66
 MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
 MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
 MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
@@ -136,23 +165,53 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] /U
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/96b48096cc6858db55ff0b9cadbfdd91/transport-backend-cct-2.2.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/96b48096cc6858db55ff0b9cadbfdd91/transport-backend-cct-2.2.0/AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:8:22-64
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:12:5-78
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-iid:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/15e27f388fa6d874488dbe33bfb5f19c/firebase-iid-20.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/15e27f388fa6d874488dbe33bfb5f19c/firebase-iid-20.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ae3c1578debcad49d0a6c8743b24abc8/play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ae3c1578debcad49d0a6c8743b24abc8/play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c54d21df40a2b914be32b843578fb0ff/play-services-measurement-api-17.6.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c54d21df40a2b914be32b843578fb0ff/play-services-measurement-api-17.6.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:16.3.3] /Users/shiva/.gradle/caches/transforms-2/files-2.1/657a4170ad1fbb28863aa99d484eaa8d/firebase-installations-16.3.3/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:16.3.3] /Users/shiva/.gradle/caches/transforms-2/files-2.1/657a4170ad1fbb28863aa99d484eaa8d/firebase-installations-16.3.3/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/b8f8222fda855e53e6ed9c19d9ffc7de/play-services-measurement-17.6.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/b8f8222fda855e53e6ed9c19d9ffc7de/play-services-measurement-17.6.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1fa899f6cccbb8f87c9cdcde1aaf6588/play-services-measurement-impl-17.6.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1fa899f6cccbb8f87c9cdcde1aaf6588/play-services-measurement-impl-17.6.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f97a545ebbdcebd6555e7ddddc56d3bd/play-services-measurement-sdk-api-17.6.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f97a545ebbdcebd6555e7ddddc56d3bd/play-services-measurement-sdk-api-17.6.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/96b48096cc6858db55ff0b9cadbfdd91/transport-backend-cct-2.2.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/96b48096cc6858db55ff0b9cadbfdd91/transport-backend-cct-2.2.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/34066712d6449b2703aaeeeb718baf20/transport-runtime-2.2.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/34066712d6449b2703aaeeeb718baf20/transport-runtime-2.2.0/AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/51af2dccb0e3ccab06196fef4de11462/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/51af2dccb0e3ccab06196fef4de11462/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:12:22-76
 application
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:10:5-48:19
-MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:14:5-58:19
 MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
 MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-18:19
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-18:19
-MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
-MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-18:19
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-18:19
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/bfa8c1bb13450d44a2c5600822ac3420/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
@@ -212,105 +271,121 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /Users/sh
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/35f29bb1a578f0319e9c3e21730b6b49/core-1.2.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:12:9-42
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:16:9-42
 	android:icon
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:17:9-43
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:11:9-57
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:15:9-57
 activity#com.virtualmarriageme.MainActivity
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:14:9-42:20
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:18:9-46:20
 	android:launchMode
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:16:13-43
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:20:13-43
 	android:hardwareAccelerated
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:19:13-47
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:23:13-47
 	android:windowSoftInputMode
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:20:13-55
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:24:13-55
 	android:configChanges
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:18:13-163
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:22:13-163
 	android:theme
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:17:13-47
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:21:13-47
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:15:13-41
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:19:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:25:13-28:17
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:29:13-32:17
 	android:resource
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:27:15-52
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:31:15-52
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:26:15-70
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:30:15-70
 meta-data#io.flutter.embedding.android.SplashScreenDrawable
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:34:13-37:17
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:38:13-41:17
 	android:resource
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:36:15-61
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:40:15-61
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:35:15-79
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:39:15-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:38:13-41:29
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:42:13-45:29
 action#android.intent.action.MAIN
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:39:17-68
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:43:17-68
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:39:25-66
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:43:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:40:17-76
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:44:17-76
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:40:27-74
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:44:27-74
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:50:9-53:71
+	android:screenOrientation
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:52:13-49
+	android:theme
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:53:13-69
+	android:name
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:51:13-60
 meta-data#flutterEmbedding
-ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:45:9-47:33
+ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:55:9-57:33
 	android:value
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:47:13-30
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:57:13-30
 	android:name
-		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:46:13-44
+		ADDED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml:56:13-44
 uses-sdk
 INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml
-MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:fluttertoast] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:fluttertoast] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:sqflite] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:sqflite] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_custom_tabs] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_custom_tabs/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_custom_tabs] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_custom_tabs/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:path_provider] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:path_provider] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_local_notifications] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_local_notifications] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_image_compress] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_image_compress/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-9:55
+MERGED from [:flutter_image_compress] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_image_compress/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-9:55
+MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_custom_tabs] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_custom_tabs/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_custom_tabs] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_custom_tabs/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_cropper] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_cropper/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_cropper] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_cropper/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:21:5-44
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f4318b834405921e87d6b24ed175996c/ucrop-2.2.6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f4318b834405921e87d6b24ed175996c/ucrop-2.2.6/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/701c33591765b03ec8ed51d702bd262d/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/701c33591765b03ec8ed51d702bd262d/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/bfa8c1bb13450d44a2c5600822ac3420/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/bfa8c1bb13450d44a2c5600822ac3420/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3797210526498783b10551402a1fe0ba/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3797210526498783b10551402a1fe0ba/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1815d939eb526de30de2b6c9c70bd3b0/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1815d939eb526de30de2b6c9c70bd3b0/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-messaging:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/500fe7fea42505fae252c59410e39238/jetified-firebase-messaging-20.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/500fe7fea42505fae252c59410e39238/jetified-firebase-messaging-20.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3797210526498783b10551402a1fe0ba/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3797210526498783b10551402a1fe0ba/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1815d939eb526de30de2b6c9c70bd3b0/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1815d939eb526de30de2b6c9c70bd3b0/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-iid:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/15e27f388fa6d874488dbe33bfb5f19c/firebase-iid-20.3.0/AndroidManifest.xml:20:5-44
@@ -377,18 +452,26 @@ MERGED from [androidx.loader:loader:1.0.0] /Users/shiva/.gradle/caches/transform
 MERGED from [androidx.loader:loader:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/28c8df72e3e98cf2af337943db219b6d/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/5a1de8d3594afca67ad230d5d25a73b9/activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/5a1de8d3594afca67ad230d5d25a73b9/activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d255798b3263f4a3c8e304b7de4de531/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d255798b3263f4a3c8e304b7de4de531/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0-rc01] /Users/shiva/.gradle/caches/transforms-2/files-2.1/005b1c488f0d5e9f3ba6a8259f041c2d/transition-1.2.0-rc01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0-rc01] /Users/shiva/.gradle/caches/transforms-2/files-2.1/005b1c488f0d5e9f3ba6a8259f041c2d/transition-1.2.0-rc01/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/6af37b0dc18acadfaf8b0344ec157d66/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/6af37b0dc18acadfaf8b0344ec157d66/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d255798b3263f4a3c8e304b7de4de531/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d255798b3263f4a3c8e304b7de4de531/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3008a15222323dd0393f3314747b2d3a/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3008a15222323dd0393f3314747b2d3a/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/31cd047ed3ec37dce69ba9f16e10a05d/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/31cd047ed3ec37dce69ba9f16e10a05d/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f266002780b6f62ae73a8842bc10a810/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f266002780b6f62ae73a8842bc10a810/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/5a5d53679d914b768463e606a8e8f920/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/5a5d53679d914b768463e606a8e8f920/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/2ecca17b0eb70fcbc1e9d8148641257d/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/2ecca17b0eb70fcbc1e9d8148641257d/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/a5b8095803802f17607f1ac359c588fa/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/a5b8095803802f17607f1ac359c588fa/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/06d80eb16b557b026bc1ef456724990c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/06d80eb16b557b026bc1ef456724990c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/35f29bb1a578f0319e9c3e21730b6b49/core-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/35f29bb1a578f0319e9c3e21730b6b49/core-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/00db72760b3662c4528b816b17c43995/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
@@ -399,10 +482,12 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shiva/.gradle/c
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/82b463c8584fb88ea5a1f562d740c4b7/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/a78ce9b49fd39a3eac90624d04d1ee8a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/a78ce9b49fd39a3eac90624d04d1ee8a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d1aef1559ce6f8e93cc37974cafbe821/heifwriter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d1aef1559ce6f8e93cc37974cafbe821/heifwriter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ffbc01c62758e32dfc06aa0e80ac9b1e/exifinterface-1.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ffbc01c62758e32dfc06aa0e80ac9b1e/exifinterface-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3bf5fc05ca184d01c3bed36c84f7c6c7/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/3bf5fc05ca184d01c3bed36c84f7c6c7/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -435,20 +520,38 @@ MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] /Users/shiva
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/259fa5658ab0c8ebc18c8bfd8307c08c/protolite-well-known-types-17.1.0/AndroidManifest.xml:7:5-9:41
 INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:flutter_image_compress] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/flutter_image_compress/intermediates/library_manifest/debug/AndroidManifest.xml:9:9-52
 	android:targetSdkVersion
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shiva/Anurag/Flutter/virtualmarriageME/android/app/src/debug/AndroidManifest.xml
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-17:19
-MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-17:19
-MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-17:19
+MERGED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-17:19
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:33:9-39:19
@@ -476,83 +579,37 @@ MERGED from [com.google.firebase:firebase-common:19.3.1] /Users/shiva/.gradle/ca
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:19.3.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d57cc9b6bc1ad49fc287f9c1dbc7bf83/jetified-firebase-common-19.3.1/AndroidManifest.xml:35:13-43
 	android:name
-		ADDED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+		ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
+ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-77
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-68
+	android:name
+		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-65
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
+ADDED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
 		ADDED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_storage] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
-	android:name
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
-MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-81
-MERGED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-81
-	android:name
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
-provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
-ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
-	android:grantUriPermissions
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
-	android:authorities
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
-	android:exported
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
-	android:name
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
-	android:resource
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
-	android:name
-		ADDED from [:image_picker] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
-	android:name
-		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
-uses-permission#android.permission.CAMERA
-ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-65
-	android:name
-		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-62
-uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-80
-	android:name
-		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-77
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
-MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:21.7.1] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f2287fd2d966c59efeb0509cfb82db1b/jetified-firebase-firestore-21.7.1/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:19.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/d8fbad351f264cc56571cca0020ccb06/firebase-storage-19.2.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-iid:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/15e27f388fa6d874488dbe33bfb5f19c/firebase-iid-20.3.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:20.3.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/15e27f388fa6d874488dbe33bfb5f19c/firebase-iid-20.3.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ae3c1578debcad49d0a6c8743b24abc8/play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ae3c1578debcad49d0a6c8743b24abc8/play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c54d21df40a2b914be32b843578fb0ff/play-services-measurement-api-17.6.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/c54d21df40a2b914be32b843578fb0ff/play-services-measurement-api-17.6.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-installations:16.3.3] /Users/shiva/.gradle/caches/transforms-2/files-2.1/657a4170ad1fbb28863aa99d484eaa8d/firebase-installations-16.3.3/AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-installations:16.3.3] /Users/shiva/.gradle/caches/transforms-2/files-2.1/657a4170ad1fbb28863aa99d484eaa8d/firebase-installations-16.3.3/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-measurement:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/b8f8222fda855e53e6ed9c19d9ffc7de/play-services-measurement-17.6.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/b8f8222fda855e53e6ed9c19d9ffc7de/play-services-measurement-17.6.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1fa899f6cccbb8f87c9cdcde1aaf6588/play-services-measurement-impl-17.6.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/1fa899f6cccbb8f87c9cdcde1aaf6588/play-services-measurement-impl-17.6.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f97a545ebbdcebd6555e7ddddc56d3bd/play-services-measurement-sdk-api-17.6.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/f97a545ebbdcebd6555e7ddddc56d3bd/play-services-measurement-sdk-api-17.6.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/96b48096cc6858db55ff0b9cadbfdd91/transport-backend-cct-2.2.0/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/96b48096cc6858db55ff0b9cadbfdd91/transport-backend-cct-2.2.0/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/34066712d6449b2703aaeeeb718baf20/transport-runtime-2.2.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/34066712d6449b2703aaeeeb718baf20/transport-runtime-2.2.0/AndroidManifest.xml:22:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/51af2dccb0e3ccab06196fef4de11462/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/51af2dccb0e3ccab06196fef4de11462/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-	android:name
-		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-76
-uses-permission#android.permission.BLUETOOTH
-ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-68
-	android:name
-		ADDED from [:agora_rtc_engine] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/agora_rtc_engine/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-65
 service#io.flutter.plugins.firebasemessaging.FlutterFirebaseMessagingService
 ADDED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 	android:name
@@ -569,6 +626,12 @@ ADDED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/b
 		ADDED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-82
 	android:name
 		ADDED from [:firebase_messaging] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_messaging/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-127
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
+ADDED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 activity#io.flutter.plugins.urllauncher.WebViewActivity
 ADDED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
 	android:exported
@@ -577,24 +640,6 @@ ADDED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/u
 		ADDED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
 	android:name
 		ADDED from [:url_launcher] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:cloud_firestore] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:firebase_auth] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:firebase_core] /Users/shiva/Anurag/Flutter/virtualmarriageME/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:19.4.0] /Users/shiva/.gradle/caches/transforms-2/files-2.1/ee449d3e67c70a150d20287a3fddee4f/firebase-auth-19.4.0/AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents

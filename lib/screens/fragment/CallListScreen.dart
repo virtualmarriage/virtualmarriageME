@@ -21,7 +21,6 @@ class CallListScreen extends StatefulWidget {
 }
 
 class _CallListScreenState extends State<CallListScreen> {
-
   final PermissionHandler _permissionHandler = PermissionHandler();
 
   bool isLoading;

@@ -73,6 +73,13 @@ androidx/annotation/UiThread.class
 androidx/annotation/VisibleForTesting.class
 androidx/annotation/WorkerThread.class
 androidx/annotation/XmlRes.class
+androidx/appcompat/app/ActionBar$DisplayOptions.class
+androidx/appcompat/app/ActionBar$NavigationMode.class
+androidx/appcompat/app/AppCompatDelegate$NightMode.class
+androidx/appcompat/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
+androidx/appcompat/view/menu/CascadingMenuPopup$HorizPosition.class
+androidx/appcompat/widget/LinearLayoutCompat$DividerMode.class
+androidx/appcompat/widget/LinearLayoutCompat$OrientationMode.class
 androidx/browser/browseractions/BrowserActionsIntent$BrowserActionsItemId.class
 androidx/browser/browseractions/BrowserActionsIntent$BrowserActionsUrlType.class
 androidx/browser/customtabs/CustomTabsService$Relation.class
@@ -107,6 +114,9 @@ androidx/core/view/ViewCompat$ScrollIndicators.class
 androidx/core/widget/TextViewCompat$AutoSizeTextType.class
 androidx/exifinterface/media/ExifInterface$ExifStreamType.class
 androidx/exifinterface/media/ExifInterface$IfdType.class
+androidx/heifwriter/HeifEncoder$InputMode.class
+androidx/heifwriter/HeifWriter$InputMode.class
+androidx/heifwriter/Texture2dProgram$ProgramType.class
 androidx/lifecycle/Lifecycle$Event.class
 androidx/lifecycle/OnLifecycleEvent.class
 androidx/media/AudioAttributesCompat$AttributeContentType.class
@@ -128,6 +138,9 @@ androidx/multidex/MultiDexExtractor.class
 androidx/multidex/ZipUtil$CentralDirectory.class
 androidx/multidex/ZipUtil.class
 androidx/swiperefreshlayout/widget/CircularProgressDrawable$ProgressDrawableSize.class
+androidx/transition/Slide$GravityFlag.class
+androidx/transition/Transition$MatchOrder.class
+androidx/transition/Visibility$Mode.class
 androidx/versionedparcelable/NonParcelField.class
 androidx/versionedparcelable/ParcelField.class
 androidx/versionedparcelable/VersionedParcelize.class
@@ -238,6 +251,9 @@ com/google/j2objc/annotations/RetainedWith.class
 com/google/j2objc/annotations/Weak.class
 com/google/j2objc/annotations/WeakOuter.class
 com/google/protobuf/ExperimentalApi.class
+com/yalantis/ucrop/UCropActivity$GestureTypes.class
+com/yalantis/ucrop/UCropFragment$GestureTypes.class
+com/yalantis/ucrop/view/OverlayView$FreestyleMode.class
 dagger/Binds.class
 dagger/BindsInstance.class
 dagger/BindsOptionalOf.class
@@ -457,6 +473,7 @@ kotlin/text/StringsKt__StringsJVMKt.class
 kotlin/text/StringsKt__StringsKt.class
 kotlin/time/ClockKt.class
 kotlin/time/ExperimentalTime.class
+okhttp3/internal/annotations/EverythingIsNonNull.class
 org/checkerframework/checker/nullness/compatqual/KeyForDecl.class
 org/checkerframework/checker/nullness/compatqual/KeyForType.class
 org/checkerframework/checker/nullness/compatqual/MonotonicNonNullDecl.class

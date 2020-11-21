@@ -1,12 +1,9 @@
-import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
-import 'package:image_cropper/image_cropper.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/chips_choice.dart';
+import 'package:virtualmarriageME/widgets/ImageSelector.dart';
 import 'package:virtualmarriageME/widgets/ImageView.dart';
 import 'package:virtualmarriageME/widgets/PlaceHolder.dart';
 
@@ -38,6 +35,10 @@ class _EditProfileScreen extends State<EditProfileScreen> {
 
   File imageFile1;
   File imageFile2;
+  File imageFile3;
+  File imageFile4;
+  File imageFile5;
+  File imageFile6;
 
   @override
   void initState() {
@@ -85,7 +86,16 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                       flex: 2,
                       child: imageFile1 == null
                           ? PlaceHolder(
-                              act: () => {_showPicker(context, 1)},
+                              act: () => {
+                                ImageSelector()
+                                    .showPicker(context)
+                                    .then((value) => {
+                                          setState(() {
+                                            imageFile1 = value;
+                                          }),
+                                          uploadPhoto(context, imageFile1)
+                                        }),
+                              },
                             )
                           : ImageView(
                               imageFile: imageFile1,
@@ -102,24 +112,50 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                       flex: 2,
                       child: imageFile2 == null
                           ? PlaceHolder(
-                        act: () => {_showPicker(context, 2)},
-                      )
+                              act: () => {
+                                ImageSelector()
+                                    .showPicker(context)
+                                    .then((value) => {
+                                          setState(() {
+                                            imageFile2 = value;
+                                          }),
+                                          uploadPhoto(context, imageFile2)
+                                        }),
+                              },
+                            )
                           : ImageView(
-                          imageFile: imageFile2,
-                          act: () => {
-                            setState(() {
-                              imageFile2 = null;
-                            })
-                          }),
+                              imageFile: imageFile2,
+                              act: () => {
+                                    setState(() {
+                                      imageFile2 = null;
+                                    })
+                                  }),
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Expanded(
                       flex: 2,
-                      child: PlaceHolder(
-                        act: null,
-                      ),
+                      child: imageFile3 == null
+                          ? PlaceHolder(
+                              act: () => {
+                                ImageSelector()
+                                    .showPicker(context)
+                                    .then((value) => {
+                                          setState(() {
+                                            imageFile3 = value;
+                                          }),
+                                          uploadPhoto(context, imageFile3)
+                                        }),
+                              },
+                            )
+                          : ImageView(
+                              imageFile: imageFile3,
+                              act: () => {
+                                    setState(() {
+                                      imageFile3 = null;
+                                    })
+                                  }),
                     ),
                   ],
                 ),
@@ -131,27 +167,78 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                   children: [
                     Expanded(
                       flex: 2,
-                      child: PlaceHolder(
-                        act: null,
-                      ),
+                      child: imageFile4 == null
+                          ? PlaceHolder(
+                              act: () => {
+                                ImageSelector()
+                                    .showPicker(context)
+                                    .then((value) => {
+                                          setState(() {
+                                            imageFile4 = value;
+                                          }),
+                                          uploadPhoto(context, imageFile4)
+                                        }),
+                              },
+                            )
+                          : ImageView(
+                              imageFile: imageFile4,
+                              act: () => {
+                                    setState(() {
+                                      imageFile4 = null;
+                                    })
+                                  }),
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Expanded(
                       flex: 2,
-                      child: PlaceHolder(
-                        act: null,
-                      ),
+                      child: imageFile5 == null
+                          ? PlaceHolder(
+                              act: () => {
+                                ImageSelector()
+                                    .showPicker(context)
+                                    .then((value) => {
+                                          setState(() {
+                                            imageFile5 = value;
+                                          }),
+                                          uploadPhoto(context, imageFile5)
+                                        }),
+                              },
+                            )
+                          : ImageView(
+                              imageFile: imageFile5,
+                              act: () => {
+                                    setState(() {
+                                      imageFile5 = null;
+                                    })
+                                  }),
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Expanded(
                       flex: 2,
-                      child: PlaceHolder(
-                        act: null,
-                      ),
+                      child: imageFile6 == null
+                          ? PlaceHolder(
+                              act: () => {
+                                ImageSelector()
+                                    .showPicker(context)
+                                    .then((value) => {
+                                          setState(() {
+                                            imageFile6 = value;
+                                          }),
+                                          uploadPhoto(context, imageFile6)
+                                        }),
+                              },
+                            )
+                          : ImageView(
+                              imageFile: imageFile6,
+                              act: () => {
+                                    setState(() {
+                                      imageFile6 = null;
+                                    }),
+                                  }),
                     ),
                   ],
                 ),
@@ -161,12 +248,8 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
-                      Text("Enter your full name.",
-                          style: new TextStyle(
-                            fontSize: 16,
-                          )),
                       TextFormField(
                         decoration: new InputDecoration(
                           labelText: "Your name",
@@ -194,12 +277,8 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
-                      Text("Enter your Age.",
-                          style: new TextStyle(
-                            fontSize: 16,
-                          )),
                       TextFormField(
                         decoration: new InputDecoration(
                           labelText: "Your age",
@@ -219,21 +298,19 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                             return null;
                           }
                         },
-                        keyboardType: TextInputType.text,
+                        maxLength: 2,
+                        keyboardType: TextInputType.number,
                         style: new TextStyle(
                           color: Color(0xFF000000),
                           fontSize: 18,
                           fontFamily: "Poppins",
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
                     ],
                   ),
                 ),
                 Container(
-                    height: 100,
+                    height: 50,
                     alignment: Alignment.center,
                     child: Center(
                       child: new ListView.builder(
@@ -257,7 +334,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                                 }
                               });
                             },
-                            child: new RadioItem(ganderData[index]),
+                            child: RadioItem(ganderData[index]),
                           );
                         },
                       ),
@@ -281,15 +358,11 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                         ),
                       ],
                     )),
-                Text("Tell us about yourself",
-                    style: new TextStyle(
-                      fontSize: 16,
-                    )),
                 TextFormField(
                   minLines: 1,
                   maxLines: 5,
                   decoration: new InputDecoration(
-                    labelText: "About",
+                    labelText: "About You",
                     fillColor: Colors.white,
                     border: new OutlineInputBorder(
                       borderRadius: new BorderRadius.circular(10.0),
@@ -316,37 +389,6 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("Like to talk.",
-                    style: new TextStyle(
-                      fontSize: 16,
-                    )),
-                DropdownButton<String>(
-                  value: dropdownValue,
-                  icon: Icon(Icons.arrow_downward),
-                  iconSize: 24,
-                  elevation: 16,
-                  style: TextStyle(color: Colors.deepPurple),
-                  underline: Container(
-                    height: 2,
-                    color: Colors.deepPurpleAccent,
-                  ),
-                  onChanged: (String newValue) {
-                    setState(() {
-                      dropdownValue = newValue;
-                    });
-                  },
-                  items: <String>['One', 'Two', 'Free', 'Other']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-                ),
-                Text("Add your full address.",
-                    style: new TextStyle(
-                      fontSize: 16,
-                    )),
                 TextFormField(
                   minLines: 1,
                   maxLines: 5,
@@ -384,116 +426,10 @@ class _EditProfileScreen extends State<EditProfileScreen> {
     );
   }
 
-  void _showPicker(context, int position) {
-    showModalBottomSheet(
-        context: context,
-        builder: (BuildContext bc) {
-          return SafeArea(
-            child: Container(
-              child: new Wrap(
-                children: <Widget>[
-                  new ListTile(
-                      leading: new Icon(Icons.photo_library),
-                      title: new Text('Photo Library'),
-                      onTap: () {
-                        _pickImage(ImageSource.gallery).then((value) => {
-                          setState(() {
-                            if(position ==1) {
-                              imageFile1 = value;
-                            } else if(position ==2) {
-                              imageFile2 = value;
-                            }
-                          }),
-                          value = null
-                        });
-                        Navigator.of(context).pop();
-                      }),
-                  new ListTile(
-                    leading: new Icon(Icons.photo_camera),
-                    title: new Text('Camera'),
-                    onTap: () {
-                      _pickImage(ImageSource.camera).then((value) => {
-                        setState(() {
-                          if(position ==1) {
-                            imageFile1 = value;
-                          } else if(position ==2) {
-                            imageFile2 = value;
-                          }
-                        })
-                      });
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              ),
-            ),
-          );
-        });
-  }
+  void uploadPhoto(BuildContext context, File file){
+    Api().uploadPhoto(context: context, file: file).then((value) => {
 
-  Future<File> _pickImage(ImageSource imageSource) async {
-    var pickedFile = await ImagePicker().getImage(source: imageSource);
-    File imageFile = File(pickedFile.path);
-
-    if (imageFile != null) {
-      imageFile = await _cropImage(imageFile);
-      return imageFile;
-    }
-    return null;
-  }
-
-  Future<File> _cropImage(File imageFile) async {
-    File croppedFile = await ImageCropper.cropImage(
-        sourcePath: imageFile.path,
-        aspectRatioPresets: Platform.isAndroid
-            ? [
-                CropAspectRatioPreset.square,
-                CropAspectRatioPreset.ratio3x2,
-                CropAspectRatioPreset.original,
-                CropAspectRatioPreset.ratio4x3,
-                CropAspectRatioPreset.ratio16x9
-              ]
-            : [
-                CropAspectRatioPreset.original,
-                CropAspectRatioPreset.square,
-                CropAspectRatioPreset.ratio3x2,
-                CropAspectRatioPreset.ratio4x3,
-                CropAspectRatioPreset.ratio5x3,
-                CropAspectRatioPreset.ratio5x4,
-                CropAspectRatioPreset.ratio7x5,
-                CropAspectRatioPreset.ratio16x9
-              ],
-        androidUiSettings: AndroidUiSettings(
-            toolbarTitle: 'Cropper',
-            toolbarColor: Colors.deepOrange,
-            toolbarWidgetColor: Colors.white,
-            initAspectRatio: CropAspectRatioPreset.original,
-            lockAspectRatio: false),
-        iosUiSettings: IOSUiSettings(
-          title: 'Cropper',
-        ));
-    if (croppedFile != null) {
-      final dir = await path_provider.getTemporaryDirectory();
-      final targetPath = dir.absolute.path + "/temp.jpg";
-      final imgFile = await compressAndGetFile(imageFile, targetPath);
-
-      return imgFile;
-    }
-    return null;
-  }
-
-  Future<File> compressAndGetFile(File file, String targetPath) async {
-    var result = await FlutterImageCompress.compressAndGetFile(
-      file.absolute.path,
-      targetPath,
-      quality: 88,
-      rotate: 0,
-    );
-
-    print(file.lengthSync());
-    print(result.lengthSync());
-
-    return result;
+    });
   }
 }
 
@@ -505,15 +441,15 @@ class RadioItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      margin: new EdgeInsets.all(10.0),
+      margin: EdgeInsets.all(10),
       alignment: Alignment.center,
       child: new Row(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          new Container(
+          Container(
             alignment: Alignment.topCenter,
-            height: 50.0,
-            padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+            height: 30,
+            padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
             child: Row(
               children: [
                 Image.asset(
@@ -523,12 +459,12 @@ class RadioItem extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                new Center(
-                  child: new Text(_item.buttonText,
+                Center(
+                  child: Text(_item.buttonText,
                       style: new TextStyle(
                           color: _item.isSelected ? Colors.white : Colors.black,
                           //fontWeight: FontWeight.bold,
-                          fontSize: 18.0)),
+                          fontSize: 16.0)),
                 ),
               ],
             ),
@@ -542,10 +478,6 @@ class RadioItem extends StatelessWidget {
               borderRadius: const BorderRadius.all(const Radius.circular(20.0)),
             ),
           ),
-          /*new Container(
-            margin: new EdgeInsets.only(left: 10.0),
-            child: new Text(_item.text),
-          )*/
         ],
       ),
     );

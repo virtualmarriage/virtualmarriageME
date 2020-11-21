@@ -99,17 +99,28 @@ class Api {
     }
   }
 
-/*
-  Future<String> uploadPhoto(File file) async {
+  Future<String> uploadPhoto({@required BuildContext context, @required File file}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Uploading...');
+    progressDialog.show();
+
     String fileName = file.path.split('/').last;
     FormData formData = FormData.fromMap({
-      "file":
+      "image":
       await MultipartFile.fromFile(file.path, filename:fileName),
     });
-    response = await dio.post("/info", data: formData);
+    print('Request: ${formData.fields}');
+
+    Dio dio = new Dio();
+    dio.options.headers["token"] = token;
+    Response response = await dio.post("${_baseUrl}uploadphoto/", data: formData);
+    print('Response: $response');
+    progressDialog.hide();
     return response.data['id'];
   }
-*/
+
 
   Future<List<ProductData>> getProductList() async {
     var param = {

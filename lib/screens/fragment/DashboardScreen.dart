@@ -32,6 +32,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
             new FlatButton(
+              color: Color(0xFFEE829C),
+              textColor: Colors.white,
+              disabledColor: Colors.grey,
+              disabledTextColor: Colors.black,
+              padding: EdgeInsets.all(8.0),
+              splashColor: Color(0xFFEE829C),
               child: new Text("Close"),
               onPressed: () {
                 Navigator.of(context).pop();
@@ -118,7 +124,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     children: [
                                       Text("Now your status is: ${isChatSwitched == true?'Online': 'Ofline'}",
                                           style:
-                                          TextStyle(fontSize: 12, color: Colors.black)),
+                                          TextStyle(fontSize: 14, color: Colors.black)),
                                     ],
                                   ),
                                 ),
@@ -130,7 +136,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     children: [
                                       Text("Chat Status",
                                           style:
-                                          TextStyle(fontSize: 16, color: Colors.black)),
+                                          TextStyle(fontSize: 18, color: Colors.black)),
                                       SizedBox(
                                         width: 20,
                                       ),
@@ -192,7 +198,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     children: [
                                       Text("Now your call status is: ${isCallSwitched == true?'Online': 'Ofline'}",
                                           style:
-                                          TextStyle(fontSize: 12, color: Colors.black)),
+                                          TextStyle(fontSize: 14, color: Colors.black)),
                                     ],
                                   ),
                                 ),
@@ -204,7 +210,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     children: [
                                       Text("Voice Call Status",
                                           style:
-                                          TextStyle(fontSize: 16, color: Colors.black)),
+                                          TextStyle(fontSize: 18, color: Colors.black)),
                                       SizedBox(
                                         width: 20,
                                       ),
@@ -266,14 +272,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         },
                         child: Container(
                             height: 80,
-                            width: 120,
+                            width: 140,
                             margin: EdgeInsets.all(10),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text("Total Earning",
                                     style:
-                                    TextStyle(fontSize: 14, color: Colors.black)),
+                                    TextStyle(fontSize: 16, color: Colors.black)),
                                 SizedBox(height: 10,),
                                 Icon(
                                   Icons.money,
@@ -290,14 +296,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Card(
                       child: Container(
                           height: 80,
-                          width: 120,
+                          width: 140,
                           margin: EdgeInsets.all(10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text("Customer Support",
                                   style:
-                                  TextStyle(fontSize: 14, color: Colors.black)),
+                                  TextStyle(fontSize: 16, color: Colors.black)),
                               SizedBox(height: 10,),
                               Icon(
                                 Icons.support_agent,

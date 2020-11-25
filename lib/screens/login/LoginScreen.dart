@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   SubmitButton(
-                     title: "Login",
+                     title: "SEND OTP",
                       act: () async {
                       if (_txtNumber.text.length == 10) {
                         Api().login(mobileNo: _txtNumber.text, context: context).then((value) => {
@@ -110,12 +110,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                   ),
                   SizedBox(height: 20,),
-                  InkWell(
+                  /*InkWell(
                     onTap: (){
                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),),);
                     },
                     child: Text("SKIP", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.normal,decoration: TextDecoration.underline,),),
-                  )
+                  )*/
                 ],
               ),
             ),

@@ -20,6 +20,12 @@ class _SettingScreen extends State<SettingScreen> {
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
             new FlatButton(
+              color: Color(0xFFEE829C),
+              textColor: Colors.white,
+              disabledColor: Colors.grey,
+              disabledTextColor: Colors.black,
+              padding: EdgeInsets.all(8.0),
+              splashColor: Color(0xFFEE829C),
               child: new Text("Close"),
               onPressed: () {
                 Navigator.of(context).pop();
@@ -74,7 +80,7 @@ class _SettingScreen extends State<SettingScreen> {
                           children: [
                             Text("Now your notification is: ${isNotificationSwitched == true?'On': 'Off'}",
                                 style:
-                                TextStyle(fontSize: 12, color: Colors.black)),
+                                TextStyle(fontSize: 14, color: Colors.black)),
                           ],
                         ),
                       ),
@@ -86,7 +92,7 @@ class _SettingScreen extends State<SettingScreen> {
                           children: [
                             Text("Notification On/Off",
                                 style:
-                                TextStyle(fontSize: 16, color: Colors.black)),
+                                TextStyle(fontSize: 18, color: Colors.black)),
                             SizedBox(
                               width: 20,
                             ),
@@ -145,7 +151,7 @@ class _SettingScreen extends State<SettingScreen> {
                           children: [
                             Text("Now your age is: ${isAgeSwitched == true?'Visible': 'Invisible'}",
                                 style:
-                                TextStyle(fontSize: 12, color: Colors.black)),
+                                TextStyle(fontSize: 14, color: Colors.black)),
                           ],
                         ),
                       ),
@@ -157,7 +163,7 @@ class _SettingScreen extends State<SettingScreen> {
                           children: [
                             Text("Age Visible/Invisible",
                                 style:
-                                TextStyle(fontSize: 16, color: Colors.black)),
+                                TextStyle(fontSize: 18, color: Colors.black)),
                             SizedBox(
                               width: 20,
                             ),

@@ -64,7 +64,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                     child: Text(
-                      "Didn't you received any code?",
+                      "Didn't you received any OTP message?",
                       style: Theme.of(context).textTheme.subhead,
                     ),
                   ),

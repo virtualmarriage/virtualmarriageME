@@ -152,10 +152,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Row(
                         children: [
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Name', style: TextStyle(
-                                  fontSize: 14, color: Colors.black26
+                                  fontSize: 14, color: Color(0xFFEE829C)
                               ),),
                               Text('Garima Thakur', style: TextStyle(
                                   fontSize: 18, color: Colors.black
@@ -174,10 +174,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Row(
                         children: [
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Age (in year)', style: TextStyle(
-                                  fontSize: 14, color: Colors.black26
+                                  fontSize: 14, color: Color(0xFFEE829C)
                               ),),
                               Text('24', style: TextStyle(
                                   fontSize: 18, color: Colors.black
@@ -196,10 +196,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Row(
                         children: [
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Gender', style: TextStyle(
-                                  fontSize: 14, color: Colors.black26
+                                  fontSize: 14, color: Color(0xFFEE829C)
                               ),),
                               Text('Female', style: TextStyle(
                                   fontSize: 18, color: Colors.black
@@ -214,25 +214,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SizedBox(height: 10,),
                   Card(
                     child: Container(
-                      padding: EdgeInsets.all(10),
-                      width: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Interest",style: TextStyle(
-                          fontSize: 14, color: Colors.black26)),
-                          ChipsChoice<String>.multiple(
-                            value: tags,
-                            options: ChipsChoiceOption.listFrom<String, String>(
-                              source: options,
-                              value: (i, v) => v,
-                              label: (i, v) => v,
+                        padding: EdgeInsets.all(10),
+                        width: double.infinity,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Interest", style: TextStyle(
+                                fontSize: 14, color: Color(0xFFEE829C))),
+                            ChipsChoice<String>.multiple(
+                              value: tags,
+                              options: ChipsChoiceOption.listFrom<
+                                  String,
+                                  String>(
+                                source: options,
+                                value: (i, v) => v,
+                                label: (i, v) => v,
+                              ),
+                              onChanged: (val) => setState(() => tags = val),
+                              isWrapped: true,
                             ),
-                            onChanged: (val) => setState(() => tags = val),
-                            isWrapped: true,
-                          ),
-                        ],
-                      )
+                          ],
+                        )
 
                     ),
                   ),
@@ -243,17 +245,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       width: double.infinity,
                       child: Padding(
                         padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start  ,
-                              children: [
-                                Text('About', style: TextStyle(
-                                    fontSize: 14, color: Colors.black26
-                                ),),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('About', style: TextStyle(
+                                fontSize: 14, color: Color(0xFFEE829C)
+                            ),),
 
-                                 Text("If you’re really feeling inspired. I am intreasted in hot/sexy ;) chatting and call and looking best friend for trip out for NCR, I like so much hilly area.",
-                                      style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal)),
+                            Text(
+                                "If you’re really feeling inspired. I am intreasted in hot/sexy ;) chatting and call and looking best friend for trip out for NCR, I like so much hilly area.",
+                                style: TextStyle(color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal)),
 
-                              ],
+                          ],
 
 
                         ),
@@ -268,10 +273,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Row(
                         children: [
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('I like to talk.', style: TextStyle(
-                                  fontSize: 14, color: Colors.black26
+                                  fontSize: 14, color: Color(0xFFEE829C)
                               ),),
                               Text('Man', style: TextStyle(
                                   fontSize: 18, color: Colors.black
@@ -290,14 +295,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Row(
                         children: [
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start  ,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Address', style: TextStyle(
-                                  fontSize: 14, color: Colors.black26
+                                  fontSize: 14, color: Color(0xFFEE829C)
                               ),),
-                              Text('M-87 Pratap vihar, Ghaziabad UP', style: TextStyle(
-                                  fontSize: 18, color: Colors.black
-                              ),),
+                              Text('M-87 Pratap vihar, Ghaziabad UP',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black
+                                ),),
                             ],
                           ),
                         ],
@@ -305,22 +311,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
 
+                  SizedBox(height: 60,),
+
                 ],
               ),
             ),
           ),
         ),
-        floatingActionButton: new FloatingActionButton(
-            elevation: 0.0,
-            child: new Icon(Icons.edit),
-            backgroundColor: new Color(0xFFE57373),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => EditProfileScreen(),
-                ),
-              );
-            }));
+
+        floatingActionButton: FloatingActionButton.extended(
+          label: Text('Edit' , style: TextStyle(fontSize: 16),),
+          icon: Icon(Icons.edit),
+          backgroundColor: new Color(0xFFE57373),
+          foregroundColor: Colors.white,
+          tooltip: 'Edit Profile',
+          onPressed: () => {
+          Navigator.push(
+          context,
+          MaterialPageRoute(
+          builder: (context) => EditProfileScreen(),
+          ),
+          ),
+        },
+        )
+
+
+    );
   }
 }

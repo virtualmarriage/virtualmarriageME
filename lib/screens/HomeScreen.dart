@@ -134,19 +134,23 @@ class _HomeScreenState extends State<HomeScreen> {
         BottomNavyBarItem(
           icon: Icon(Icons.home),
           title: Text('Home'),
+          textAlign: TextAlign.center,
           activeColor: Color(0xFFEE829C),
         ),
         BottomNavyBarItem(
             icon: Icon(Icons.call),
             title: Text('Call History'),
+            textAlign: TextAlign.center,
             activeColor: Color(0xFFEE829C)),
         BottomNavyBarItem(
             icon: Icon(Icons.chat_bubble_outline),
             title: Text('Chat History'),
+            textAlign: TextAlign.center,
             activeColor: Color(0xFFEE829C)),
         BottomNavyBarItem(
             icon: Icon(Icons.person_add_alt_1_outlined),
             title: Text('Profile'),
+            textAlign: TextAlign.center,
             activeColor: Color(0xFFEE829C)),
       ],
     );
@@ -160,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
         style: TextStyle(color: Colors.black, fontSize: 16),
       ),
       leading: new IconButton(
-          icon: new Icon(Icons.menu, color: Colors.black),
+          icon: new Icon(Icons.menu,  color: Color(0xFFEE829C)),
           onPressed: () => _scaffoldKey.currentState.openDrawer()),
       actions: <Widget>[
         /*IconButton(
@@ -186,65 +190,138 @@ class _HomeScreenState extends State<HomeScreen> {
     Color blackColor = Colors.black.withOpacity(0.6);
     return Scaffold(
           body: SafeArea(
-            child:  Container(
-              //color: Color(0xffffffe4),
-              decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
-              ),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    alignment: Alignment.topCenter,
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      children: <Widget>[
-                        CircleAvatar(
-                          backgroundImage: AssetImage("assets/girl_image.png"),
-                          backgroundColor: Colors.grey,
-                          radius: 60,
+            child:  SingleChildScrollView(
+              child: Container(
+                //color: Color(0xffffffe4),
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      alignment: Alignment.topCenter,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            backgroundImage: AssetImage("assets/girl_image.png"),
+                            backgroundColor: Colors.grey,
+                            radius: 60,
 
-                        ),
-                        SizedBox(height: 10,),
-                        Text('${userData.name}',
-                            style: TextStyle(fontSize: 18, color: Colors.black)),
-                        Text("+91 ${userData.mobile}",
-                            style: TextStyle(fontSize: 14, color: Colors.black)),
+                          ),
+                          SizedBox(height: 10,),
+                          Text('${userData.name}',
+                              style: TextStyle(fontSize: 18, color: Colors.black)),
+                          Text("+91 ${userData.mobile}",
+                              style: TextStyle(fontSize: 14, color: Colors.black)),
 
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    child: Divider(color:Color(0xFFEE829C), thickness: 1,),
-                  ),
+                    Container(
+                      child: Divider(color:Color(0xFFEE829C), thickness: 1,),
+                    ),
 
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => WalletTransaction(),),);
-                    },
-                    child: Container(
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => WalletTransaction(),),);
+                      },
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        child: Row(
+                          children:<Widget> [
+                            Expanded(
+                              flex: 3,
+                              child: Container(
+                                child: InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => EarningScreen(),),);
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children:<Widget> [
+                                      Icon(Icons.monetization_on,
+                                        color: Color(0xFFEE829C),),
+                                      SizedBox(width: 10,),
+                                      Flexible(
+                                        child: Text("Total Transactions",
+                                            maxLines: 2,
+                                            style: TextStyle(fontSize: 14, color: Colors.black)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                  alignment: Alignment.topRight,
+                                  child: Text("0.0",
+                                    style: TextStyle(fontSize: 14, color: Colors.black),)
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children:<Widget> [
+                          Icon(Icons.chat, color: Colors.blue,),
+                          SizedBox(width: 10,),
+                          Text("Customer Chat Support",
+                              style: TextStyle(fontSize: 14, color: Colors.black)),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => SettingScreen(),),);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children:<Widget> [
+                            Icon(Icons.settings,
+                              color: Color(0xFFEE829C),),
+                            SizedBox(width: 10,),
+                            Text("Settings",
+                                style: TextStyle(fontSize: 14, color: Colors.black)),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Container(
                       margin: EdgeInsets.all(10),
                       child: Row(
                         children:<Widget> [
                           Expanded(
-                            flex: 3,
+                            flex: 1,
                             child: Container(
                               child: InkWell(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(
-                                    builder: (context) => EarningScreen(),),);
+                                  openWebsite(context);
                                 },
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children:<Widget> [
-                                    Icon(Icons.monetization_on,
-                                      color: Color(0xFFEE829C),),
+                                    Icon(Icons.web,
+                                      color:Colors.green,),
                                     SizedBox(width: 10,),
-                                    Flexible(
-                                      child: Text("Total Transactions",
-                                          maxLines: 2,
-                                          style: TextStyle(fontSize: 14, color: Colors.black)),
-                                    ),
+                                    Text("Website ",
+                                        style: TextStyle(fontSize: 14, color: Colors.black)),
                                   ],
                                 ),
                               ),
@@ -253,289 +330,241 @@ class _HomeScreenState extends State<HomeScreen> {
                           Expanded(
                             flex: 1,
                             child: Container(
-                                margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                alignment: Alignment.topRight,
-                                child: Text("0.0",
-                                  style: TextStyle(fontSize: 14, color: Colors.black),)
+                              child: InkWell(
+                                onTap: (){
+                                  openVMBlog(context);
+                                },
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children:<Widget> [
+                                    Icon(Icons.beenhere,
+                                      color: Colors.deepOrange,),
+                                    SizedBox(width: 10,),
+                                    Text("Blogs ",
+                                        style: TextStyle(fontSize: 14, color: Colors.black)),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
 
                         ],
                       ),
                     ),
-                  ),
 
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children:<Widget> [
-                        Icon(Icons.chat, color: Colors.blue,),
-                        SizedBox(width: 10,),
-                        Text("Customer Chat Support",
-                            style: TextStyle(fontSize: 14, color: Colors.black)),
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => SettingScreen(),),);
-                      },
+                    Container(
+                      margin: EdgeInsets.all(10),
                       child: Row(
-                        mainAxisSize: MainAxisSize.max,
                         children:<Widget> [
-                          Icon(Icons.settings,
-                            color: Color(0xFFEE829C),),
-                          SizedBox(width: 10,),
-                          Text("Settings",
-                              style: TextStyle(fontSize: 14, color: Colors.black)),
-                        ],
-                      ),
-                    ),
-                  ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              child: InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) => HowToUse(),),);
+                                },
 
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      children:<Widget> [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            child: InkWell(
-                              onTap: (){
-                                openWebsite(context);
-                              },
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children:<Widget> [
-                                  Icon(Icons.web,
-                                    color:Colors.green,),
-                                  SizedBox(width: 10,),
-                                  Text("Website ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black)),
-                                ],
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children:<Widget> [
+                                    Icon(Icons.event_note,
+                                      color: Colors.black,),
+                                    SizedBox(width: 10,),
+                                    Text("How to use ",
+                                        style: TextStyle(fontSize: 14, color: Colors.black)),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            child: InkWell(
-                              onTap: (){
-                                openVMBlog(context);
-                              },
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children:<Widget> [
-                                  Icon(Icons.beenhere,
-                                    color: Colors.deepOrange,),
-                                  SizedBox(width: 10,),
-                                  Text("Blogs ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black)),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      children:<Widget> [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
+                          Expanded(
+                            flex: 1,
                             child: InkWell(
                               onTap: (){
                                 Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => HowToUse(),),);
+                                  builder: (context) => AboutUsScreen(),),);
                               },
-
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children:<Widget> [
-                                  Icon(Icons.event_note,
-                                    color: Colors.black,),
-                                  SizedBox(width: 10,),
-                                  Text("How to use ",
-                                      style: TextStyle(fontSize: 14, color: Colors.black)),
-                                ],
+                              child: Container(
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children:<Widget> [
+                                    Icon(Icons.info,
+                                      color: Colors.black,),
+                                    SizedBox(width: 10,),
+                                    Text("About Us ",
+                                        style: TextStyle(fontSize: 14, color: Colors.black)),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: InkWell(
-                            onTap: (){
-                              Navigator.push(context, MaterialPageRoute(
-                                builder: (context) => AboutUsScreen(),),);
-                            },
+
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      child: Row(
+                        children:<Widget> [
+                          Expanded(
+                            flex: 1,
                             child: Container(
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children:<Widget> [
-                                  Icon(Icons.info,
+                                  Icon(Icons.rate_review,
                                     color: Colors.black,),
                                   SizedBox(width: 10,),
-                                  Text("About Us ",
+                                  Text("Rate Us",
                                       style: TextStyle(fontSize: 14, color: Colors.black)),
                                 ],
                               ),
                             ),
                           ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      children:<Widget> [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children:<Widget> [
-                                Icon(Icons.rate_review,
-                                  color: Colors.black,),
-                                SizedBox(width: 10,),
-                                Text("Rate Us",
-                                    style: TextStyle(fontSize: 14, color: Colors.black)),
-                              ],
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children:<Widget> [
+                                  Icon(Icons.share,
+                                    color: Color(0xFFEE829C),),
+                                  SizedBox(width: 10,),
+                                  Text("Share Us ",
+                                      style: TextStyle(fontSize: 14, color: Colors.black)),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children:<Widget> [
-                                Icon(Icons.share,
-                                  color: Color(0xFFEE829C),),
-                                SizedBox(width: 10,),
-                                Text("Share Us ",
-                                    style: TextStyle(fontSize: 14, color: Colors.black)),
-                              ],
-                            ),
-                          ),
-                        ),
 
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: InkWell(
-                      onTap: () {
-                        PreferenceHelper.clearPreference();
-                        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => LoginScreen()), (Route<dynamic> route) => false);
-                      },
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children:<Widget> [
-                          Icon(Icons.logout, color: Colors.black,),
-                          SizedBox(width: 10,),
-                          Text("Logout", style: TextStyle(fontSize: 14, color: Colors.black)),
                         ],
                       ),
                     ),
-                  ),
 
-                  Container(
-                      margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                      child:Text('Also availble on', style: TextStyle(fontSize: 14, color: Colors.black))
-                  ),
-
-                  Container(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children:<Widget> [
-                        //AssetImage("assets/girl_image.png")
-                        IconButton(
-                          icon: new Image.asset('assets/leftpanel/ic_facebook.png',
-                          width: 20, height: 20,),
-                          tooltip: 'Closes application',
-                          onPressed: () {
-                            }
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      child: InkWell(
+                        onTap: () {
+                          PreferenceHelper.clearPreference();
+                          Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => LoginScreen()), (Route<dynamic> route) => false);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children:<Widget> [
+                            Icon(Icons.logout, color: Colors.black,),
+                            SizedBox(width: 10,),
+                            Text("Logout", style: TextStyle(fontSize: 14, color: Colors.black)),
+                          ],
                         ),
-                        IconButton(
-                            icon: new Image.asset('assets/leftpanel/ic_youtube.png',
-                              width: 20, height: 20,),
-                            tooltip: 'Closes application',
-                            onPressed: () {
-                            }
-                        ),
-                        IconButton(
-                            icon: new Image.asset('assets/leftpanel/ic_twitter.png',
-                              width: 20, height: 20,),
-                            tooltip: 'Closes application',
-                            onPressed: () {
-                            }
-                        ),
-                        IconButton(
-                            icon: new Image.asset('assets/leftpanel/ic_linkedin.png',
-                              width: 20, height: 20,),
-                            tooltip: 'Closes application',
-                            onPressed: () {
-                            }
-                        ),
-                        IconButton(
-                            icon: new Image.asset('assets/leftpanel/ic_instagram.png',
-                              width: 20, height: 20,),
-                            tooltip: 'Closes application',
-                            onPressed: () {
-                            }
-                        ),
-                        IconButton(
-                            icon: new Image.asset('assets/leftpanel/ic_pinterest.png',
-                              width: 20, height: 20,),
-                            tooltip: 'Closes application',
-                            onPressed: () {
-                            }
-                        ),
-
-
-
-
-
-                      ],
+                      ),
                     ),
-                  ),
 
-                  Container(
-                      margin: EdgeInsets.all(0),
-                      child:Text('Follow us & we will follow you back :)',
-                          style: TextStyle(fontSize: 14, color: Colors.black))
-                  ),
+                    Container(
+                        margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                        child:Text('Also availble on', style: TextStyle(fontSize: 14, color: Colors.black))
+                    ),
 
-                  Container(
-                      margin: EdgeInsets.all(20),
-                      child:Text('Version: 1.0.0',
-                          style: TextStyle(fontSize: 16, color: Colors.green))
-                  ),
+                    Container(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:<Widget> [
+                          //AssetImage("assets/girl_image.png")
+                          IconButton(
+                            icon: new Image.asset('assets/leftpanel/ic_facebook.png',
+                            width: 20, height: 20,),
+                            tooltip: 'Closes application',
+                            onPressed: () {
+                              openSocialWebsite(context ,"https://www.facebook.com/vm.singh.54943");
+                              }
+                          ),
+                          IconButton(
+                              icon: new Image.asset('assets/leftpanel/ic_youtube.png',
+                                width: 20, height: 20,),
+                              tooltip: 'Closes application',
+                              onPressed: () {
+                                openSocialWebsite(context ,"https://www.youtube.com/");
+                              }
+                          ),
+                          IconButton(
+                              icon: new Image.asset('assets/leftpanel/ic_twitter.png',
+                                width: 20, height: 20,),
+                              tooltip: 'Closes application',
+                              onPressed: () {
+                                openSocialWebsite(context ,"https://twitter.com/MarriageVirtual");
+                              }
+                          ),
+                          IconButton(
+                              icon: new Image.asset('assets/leftpanel/ic_linkedin.png',
+                                width: 20, height: 20,),
+                              tooltip: 'Closes application',
+                              onPressed: () {
+                                openSocialWebsite(context ,"https://www.linkedin.com/in/virutal-marriage-55a03b1bb/");
+                              }
+                          ),
+                          IconButton(
+                              icon: new Image.asset('assets/leftpanel/ic_instagram.png',
+                                width: 20, height: 20,),
+                              tooltip: 'Closes application',
+                              onPressed: () {
+                                openSocialWebsite(context ,"https://www.instagram.com/virtualmarriage/");
+                              }
+                          ),
+                          IconButton(
+                              icon: new Image.asset('assets/leftpanel/ic_pinterest.png',
+                                width: 20, height: 20,),
+                              tooltip: 'Closes application',
+                              onPressed: () {
+                                openSocialWebsite(context ,"https://in.pinterest.com/infovirtualmarriage/_saved/");
+                              }
+                          ),
 
-                ],
+
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                        margin: EdgeInsets.all(0),
+                        child:Text('Follow us & we will follow you back :)',
+                            style: TextStyle(fontSize: 14, color: Colors.black))
+                    ),
+
+                    Container(
+                        margin: EdgeInsets.all(20),
+                        child:Text('Version: 1.0.0',
+                            style: TextStyle(fontSize: 16, color: Colors.green))
+                    ),
+
+                  ],
+                ),
               ),
             ),
           )
 
           );
+  }
+
+  void openSocialWebsite(BuildContext context, String url) async {
+    try {
+      await launch(url,
+        option: new CustomTabsOption(
+          toolbarColor: Theme.of(context).primaryColor,
+          enableDefaultShare: true,
+          enableUrlBarHiding: true,
+          showPageTitle: true,
+          animation: new CustomTabsAnimation.slideIn(),
+          extraCustomTabs: <String>[
+            'org.mozilla.firefox',
+            'com.microsoft.emmx',
+          ],
+        ),
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 
   void openWebsite(BuildContext context) async {

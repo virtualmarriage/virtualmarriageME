@@ -252,7 +252,8 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                       ),
                       TextFormField(
                         decoration: new InputDecoration(
-                          labelText: "Your name",
+                          labelText: "Your Name",
+                          labelStyle: TextStyle( color: Color(0xFFEE829C) ),
                           fillColor: Colors.white,
                           border: new OutlineInputBorder(
                             borderRadius: new BorderRadius.circular(10.0),
@@ -277,11 +278,12 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 20,
                       ),
                       TextFormField(
                         decoration: new InputDecoration(
-                          labelText: "Your age",
+                          labelText: "Your Age",
+                          labelStyle: TextStyle( color: Color(0xFFEE829C) ),
                           fillColor: Colors.white,
                           border: new OutlineInputBorder(
                             borderRadius: new BorderRadius.circular(10.0),
@@ -309,61 +311,77 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                     ],
                   ),
                 ),
-                Container(
-                    height: 50,
-                    alignment: Alignment.center,
-                    child: Center(
-                      child: new ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: ganderData.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return new InkWell(
-                            //highlightColor: Colors.red,
-                            splashColor: Color(0xFFEE829C),
-                            onTap: () {
-                              setState(() {
-                                ganderData.forEach(
-                                    (element) => element.isSelected = false);
-                                ganderData[index].isSelected = true;
-                                if (index == 0) {
-                                  radioItem = "Women";
-                                } else if (index == 1) {
-                                  radioItem = "Man";
-                                } else if (index == 2) {
-                                  radioItem = "Other";
-                                }
-                              });
-                            },
-                            child: RadioItem(ganderData[index]),
-                          );
-                        },
-                      ),
-                    )),
-                Container(
-                    padding: EdgeInsets.all(10),
-                    width: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Interests", style: TextStyle(fontSize: 16)),
-                        ChipsChoice<String>.multiple(
-                          value: tags,
-                          options: ChipsChoiceOption.listFrom<String, String>(
-                            source: options,
-                            value: (i, v) => v,
-                            label: (i, v) => v,
-                          ),
-                          onChanged: (val) => setState(() => tags = val),
-                          isWrapped: true,
+
+                Text("Select Your Gender", style: TextStyle(fontSize: 18, color: Color(0xFFEE829C))),
+                Card(
+                  child: Container(
+                      height: 50,
+                      alignment: Alignment.center,
+                      child: Center(
+                        child: new ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: ganderData.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return new InkWell(
+                              //highlightColor: Colors.red,
+                              splashColor: Color(0xFFEE829C),
+                              onTap: () {
+                                setState(() {
+                                  ganderData.forEach(
+                                      (element) => element.isSelected = false);
+                                  ganderData[index].isSelected = true;
+                                  if (index == 0) {
+                                    radioItem = "Women";
+                                  } else if (index == 1) {
+                                    radioItem = "Man";
+                                  } else if (index == 2) {
+                                    radioItem = "Other";
+                                  }
+                                });
+                              },
+                              child: RadioItem(ganderData[index]),
+                            );
+                          },
                         ),
-                      ],
-                    )),
+                      )),
+                ),
+
+                SizedBox(
+                  height: 10,
+                ),
+                Card(
+                  child: Container(
+                      padding: EdgeInsets.all(10),
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Select Your Interests", style: TextStyle(fontSize: 18, color: Color(0xFFEE829C))),
+                          ChipsChoice<String>.multiple(
+                            value: tags,
+                            options: ChipsChoiceOption.listFrom<String, String>(
+                              source: options,
+                              value: (i, v) => v,
+                              label: (i, v) => v,
+                            ),
+                            onChanged: (val) => setState(() => tags = val),
+                            isWrapped: true,
+                          ),
+                        ],
+                      )),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+
                 TextFormField(
-                  minLines: 1,
+                  minLines: 3,
                   maxLines: 5,
                   decoration: new InputDecoration(
                     labelText: "About You",
-                    fillColor: Colors.white,
+                    labelStyle: TextStyle( color: Color(0xFFEE829C) ),
+                      fillColor: Colors.white,
+                      filled: true,
                     border: new OutlineInputBorder(
                       borderRadius: new BorderRadius.circular(10.0),
                       borderSide: new BorderSide(
@@ -374,7 +392,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                   ),
                   validator: (val) {
                     if (val.length == 0) {
-                      return "Age cannot be empty";
+                      return "About you cannot be empty";
                     } else {
                       return null;
                     }
@@ -387,14 +405,16 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 TextFormField(
-                  minLines: 1,
-                  maxLines: 5,
+                  minLines: 4,
+                  maxLines: 6,
                   decoration: new InputDecoration(
                     labelText: "Address",
+                    labelStyle: TextStyle( color: Color(0xFFEE829C) ),
                     fillColor: Colors.white,
+                    filled: true,
                     border: new OutlineInputBorder(
                       borderRadius: new BorderRadius.circular(10.0),
                       borderSide: new BorderSide(
@@ -418,11 +438,22 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 60,
                 ),
               ],
             ),
           )),
+
+
+        floatingActionButton: FloatingActionButton.extended(
+          label: Text('Update Now', style: TextStyle(fontSize: 16),),
+          icon: Icon(Icons.update),
+          backgroundColor: new Color(0xFFE57373),
+          foregroundColor: Colors.white,
+          onPressed: () => {
+
+          },
+        )
     );
   }
 

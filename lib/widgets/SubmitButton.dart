@@ -30,7 +30,7 @@ class _SubmitButtonState extends State<SubmitButton> {
                   onPressed: widget.act,
                   child: new Container(
                     padding: const EdgeInsets.symmetric(
-                      vertical: 15.0,
+                      vertical: 12.0,
                       horizontal: 10.0,
                     ),
                     child: new Row(
@@ -41,6 +41,7 @@ class _SubmitButtonState extends State<SubmitButton> {
                             widget.title,
                             textAlign: TextAlign.center,
                             style: TextStyle(
+                                fontSize: 18,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),

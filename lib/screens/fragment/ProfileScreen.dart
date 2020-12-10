@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:virtualmarriageME/screens/profile/EditProfileScreen.dart';
+import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/chips_choice.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -10,6 +11,13 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
+  @override
+  initState() {
+    super.initState();
+
+    getProfile();
+  }
 
   int tag = 1;
   List<String> tags = [];
@@ -266,7 +274,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
 
-                  SizedBox(height: 10,),
+                  /*SizedBox(height: 10,),
                   Card(
                     child: Padding(
                       padding: EdgeInsets.all(10),
@@ -287,7 +295,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                   ),
-
+*/
                   SizedBox(height: 10,),
                   Card(
                     child: Padding(
@@ -338,4 +346,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     );
   }
+
+  void getProfile(){
+    Api().getProfile(context: context).then((value) => {
+      if(value.status && value.data!= null) {
+        print("show data in views-----")
+      }
+    });
+  }
+
 }
+
+

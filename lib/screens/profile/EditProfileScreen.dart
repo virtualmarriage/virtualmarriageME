@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:virtualmarriageME/screens/HomeScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/chips_choice.dart';
 import 'package:virtualmarriageME/widgets/ImageSelector.dart';
@@ -16,6 +17,11 @@ class _EditProfileScreen extends State<EditProfileScreen> {
   String radioItem = '';
   List<RadioModel> ganderData = new List<RadioModel>();
   String dropdownValue = 'One';
+
+  final nameController = TextEditingController();
+  final ageController = TextEditingController();
+  final aboutController = TextEditingController();
+  final addressController = TextEditingController();
 
   int tag = 1;
   List<String> tags = [];
@@ -251,6 +257,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                         height: 20,
                       ),
                       TextFormField(
+                        controller: nameController,
                         decoration: new InputDecoration(
                           labelText: "Your Name",
                           labelStyle: TextStyle( color: Color(0xFFEE829C) ),
@@ -281,6 +288,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                         height: 20,
                       ),
                       TextFormField(
+                        controller: ageController,
                         decoration: new InputDecoration(
                           labelText: "Your Age",
                           labelStyle: TextStyle( color: Color(0xFFEE829C) ),
@@ -364,7 +372,12 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                               value: (i, v) => v,
                               label: (i, v) => v,
                             ),
-                            onChanged: (val) => setState(() => tags = val),
+                            //onChanged: (val) => setState(() => tags = val),
+                            onChanged: (val) {
+                              setState(() => tags = val);
+                              print("interests list "+ tags.toString());
+
+                            },
                             isWrapped: true,
                           ),
                         ],
@@ -375,6 +388,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                 ),
 
                 TextFormField(
+                  controller: aboutController,
                   minLines: 3,
                   maxLines: 5,
                   decoration: new InputDecoration(
@@ -408,6 +422,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                   height: 20,
                 ),
                 TextFormField(
+                  controller: addressController,
                   minLines: 4,
                   maxLines: 6,
                   decoration: new InputDecoration(
@@ -452,9 +467,25 @@ class _EditProfileScreen extends State<EditProfileScreen> {
           foregroundColor: Colors.white,
           onPressed: () => {
 
+
+            updateProfile()
+
           },
         )
     );
+  }
+
+  void updateProfile(){
+    String interests = tags.join(', ');
+
+    Api().updateProfile(name: '${nameController.text}', age: '${ageController.text}',
+                        gender: '$radioItem', aboutus: '${aboutController.text}', address: '${addressController.text}',
+                        interest: '${interests}',
+                      context: context).then((value) => {
+      if(value.status && value.data!= null) {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()),)
+      }
+    });
   }
 
   void uploadPhoto(BuildContext context, File file){
@@ -462,6 +493,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
 
     });
   }
+
 }
 
 class RadioItem extends StatelessWidget {
@@ -522,3 +554,5 @@ class RadioModel {
 
   RadioModel(this.isSelected, this.buttonText, this.text);
 }
+
+

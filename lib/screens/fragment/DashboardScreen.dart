@@ -148,8 +148,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                             //print("status==="+isChatSwitched.toString());
                                           });
                                         },
-                                        activeTrackColor: Color(0xFFFADAE1),
-                                        activeColor: Color(0xFFEE829C),
+                                        activeTrackColor: Color(0xFF88D969),
+                                        activeColor: Color(0xFF1D800E),
                                       ),
 
                                     ],
@@ -222,8 +222,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                             //print("status==="+isChatSwitched.toString());
                                           });
                                         },
-                                        activeTrackColor: Color(0xFFFADAE1),
-                                        activeColor: Color(0xFFEE829C),
+                                        activeTrackColor: Color(0xFF88D969),
+                                        activeColor: Color(0xFF1D800E),
                                       ),
 
                                     ],

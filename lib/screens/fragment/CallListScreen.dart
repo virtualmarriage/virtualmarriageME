@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:virtualmarriageME/model/ProductData.dart';
 import 'package:virtualmarriageME/screens/call/CallPage.dart';
+import 'package:virtualmarriageME/screens/call/IncomingCallScreen.dart';
 import 'package:virtualmarriageME/screens/profile/ProfileDetailScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/CommonComponent.dart';
@@ -48,12 +49,28 @@ class _CallListScreenState extends State<CallListScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              InkWell(
-                onTap: ()  {
-                  navigateToCallScreen(context);
-                },
-                child: Text('Call Now'),
-              )
+
+              SizedBox(height: 20,),
+
+              RaisedButton(child: Text('Incoming Call Screen'),
+                onPressed: () {
+                  //navigateToCallScreen(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => IncomingCallScreen(),
+                    ),
+                  );
+                }, ),
+
+              SizedBox(height: 20,),
+
+                RaisedButton(child: Text('Outgoing Call Screen'),
+                  onPressed: () {
+                    navigateToCallScreen(context);
+                  }, )
+
+
 
 
               //Categories(),

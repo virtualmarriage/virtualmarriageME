@@ -70,7 +70,9 @@ class Api {
     }
   }
 
-  Future<UserResponse> updateProfile({@required String name, @required String age, @required String gender, @required BuildContext context}) async {
+  Future<UserResponse> updateProfile({@required String name, @required String age,
+    @required String gender, @required String aboutus, @required String address, @required String interest,
+    @required BuildContext context}) async {
     String token = await PreferenceHelper.getToken();
     print('token: $token');
     progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
@@ -81,12 +83,40 @@ class Api {
         "name": "$name",
         "age": "$age",
         "gender": "$gender",
+        "aboutus": "$aboutus",
+        "address": "$address",
+        "interest": "$interest",
       });
       print('Request: ${formData.fields}');
 
       Dio dio = new Dio();
       dio.options.headers["token"] = token;
       Response response = await dio.post("${_baseUrl}updateprofile/", data: formData);
+      print('Response: $response');
+      progressDialog.hide();
+      Map jsonMap = jsonDecode(response.data);
+      return UserResponse.fromJson(jsonMap);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
+  }
+
+  Future<UserResponse> getProfile({@required BuildContext context}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Getting Profile...');
+    progressDialog.show();
+    try {
+
+      Dio dio = new Dio();
+      dio.options.headers["token"] = token;
+      //Response response = await dio.post("${_baseUrl}getProfile/");
+      print("REQUEST_URL: " + _baseUrl );
+      Response response = await dio.get("${_baseUrl}getProfile");
       print('Response: $response');
       progressDialog.hide();
       Map jsonMap = jsonDecode(response.data);

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:virtualmarriageME/model/GetProfileData.dart';
 import 'package:virtualmarriageME/model/ProductData.dart';
 import 'package:virtualmarriageME/model/UserResponse.dart';
 import 'package:virtualmarriageME/utils/CommonComponent.dart';

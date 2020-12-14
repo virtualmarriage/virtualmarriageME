@@ -29,6 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
   UserData userData;
 
+
   @override
   void initState() {
     super.initState();
@@ -190,10 +191,14 @@ class _HomeScreenState extends State<HomeScreen> {
     Color blackColor = Colors.black.withOpacity(0.6);
     return Scaffold(
           body: SafeArea(
+
             child:  SingleChildScrollView(
+
               child: Container(
+                height: MediaQuery.of(context).size.height,
                 //color: Color(0xffffffe4),
                 decoration: BoxDecoration(
+
                   image: DecorationImage(image: AssetImage("assets/bg.png"), fit: BoxFit.cover),
                 ),
                 child: Column(

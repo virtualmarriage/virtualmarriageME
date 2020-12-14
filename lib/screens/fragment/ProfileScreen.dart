@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:virtualmarriageME/model/UserResponse.dart';
 import 'package:virtualmarriageME/screens/profile/EditProfileScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 import 'package:virtualmarriageME/utils/chips_choice.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -12,11 +14,19 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
 
+  UserData userData;
+
   @override
   initState() {
     super.initState();
 
     getProfile();
+
+    PreferenceHelper.getUserProfile().then((value) => {
+      setState(() {
+        userData = value;
+      })
+    });
   }
 
   int tag = 1;
@@ -165,7 +175,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Text('Name', style: TextStyle(
                                   fontSize: 14, color: Color(0xFFEE829C)
                               ),),
-                              Text('Garima Thakur', style: TextStyle(
+                              Text('${userData.name}', style: TextStyle(
                                   fontSize: 18, color: Colors.black
                               ),),
                             ],
@@ -187,7 +197,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Text('Age (in year)', style: TextStyle(
                                   fontSize: 14, color: Color(0xFFEE829C)
                               ),),
-                              Text('24', style: TextStyle(
+                              Text('${userData.age}', style: TextStyle(
                                   fontSize: 18, color: Colors.black
                               ),),
                             ],
@@ -209,7 +219,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Text('Gender', style: TextStyle(
                                   fontSize: 14, color: Color(0xFFEE829C)
                               ),),
-                              Text('Female', style: TextStyle(
+                              Text('${userData.gender}', style: TextStyle(
                                   fontSize: 18, color: Colors.black
                               ),),
                             ],
@@ -256,12 +266,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('About', style: TextStyle(
+                            Text('About Me', style: TextStyle(
                                 fontSize: 14, color: Color(0xFFEE829C)
                             ),),
 
-                            Text(
-                                "If you’re really feeling inspired. I am intreasted in hot/sexy ;) chatting and call and looking best friend for trip out for NCR, I like so much hilly area.",
+                            Text('${userData.aboutus}',
                                 style: TextStyle(color: Colors.black,
                                     fontSize: 18,
                                     fontWeight: FontWeight.normal)),
@@ -308,7 +317,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Text('Address', style: TextStyle(
                                   fontSize: 14, color: Color(0xFFEE829C)
                               ),),
-                              Text('M-87 Pratap vihar, Ghaziabad UP',
+                              Text('${userData.address}',
                                 style: TextStyle(
                                     fontSize: 18, color: Colors.black
                                 ),),
@@ -350,6 +359,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void getProfile(){
     Api().getProfile(context: context).then((value) => {
       if(value.status && value.data!= null) {
+        PreferenceHelper.saveProfileData(value.data),
         print("show data in views-----")
       }
     });

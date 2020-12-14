@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:virtualmarriageME/model/UserResponse.dart';
 import 'package:virtualmarriageME/screens/HomeScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 import 'package:virtualmarriageME/utils/chips_choice.dart';
 import 'package:virtualmarriageME/widgets/ImageSelector.dart';
 import 'package:virtualmarriageME/widgets/ImageView.dart';
@@ -14,6 +16,7 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 class _EditProfileScreen extends State<EditProfileScreen> {
+  UserData userData;
   String radioItem = '';
   List<RadioModel> ganderData = new List<RadioModel>();
   String dropdownValue = 'One';
@@ -53,6 +56,17 @@ class _EditProfileScreen extends State<EditProfileScreen> {
     ganderData.add(new RadioModel(false, 'Women', 'assets/icon_female.png'));
     ganderData.add(new RadioModel(false, 'Man', 'assets/icon_male.png'));
     ganderData.add(new RadioModel(false, 'Other', 'assets/icon_female.png'));
+
+    PreferenceHelper.getUserProfile().then((value) => {
+      setState(() {
+        userData = value;
+
+        nameController.text = userData.name;
+        ageController.text = userData.age;
+        aboutController.text = userData.aboutus;
+        addressController.text = userData.address;
+      })
+    });
   }
 
   @override
@@ -262,6 +276,7 @@ class _EditProfileScreen extends State<EditProfileScreen> {
                           labelText: "Your Name",
                           labelStyle: TextStyle( color: Color(0xFFEE829C) ),
                           fillColor: Colors.white,
+
                           border: new OutlineInputBorder(
                             borderRadius: new BorderRadius.circular(10.0),
                             borderSide: new BorderSide(

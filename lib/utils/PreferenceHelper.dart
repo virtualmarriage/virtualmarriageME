@@ -18,10 +18,11 @@ class PreferenceHelper {
     saveValueInPreference(keyValue.id.toString(), userData.id);
     saveValueInPreference(keyValue.mobile.toString(), userData.mobile);
     saveValueInPreference(keyValue.name.toString(), userData.name);
+    saveValueInPreference(keyValue.age.toString(), userData.age);
     saveValueInPreference(keyValue.interest.toString(), userData.interest);
     saveValueInPreference(keyValue.gender.toString(), userData.gender);
-    saveValueInPreference(keyValue.callStatus.toString(), userData.callStatus);
-    saveValueInPreference(keyValue.chatStatus.toString(), userData.chatStatus);
+    saveValueInPreference(keyValue.aboutus.toString(), userData.aboutus);
+    saveValueInPreference(keyValue.address.toString(), userData.address);
     if (userData.token != null) {
       saveValueInPreference(keyValue.token.toString(), userData.token);
     }
@@ -40,9 +41,17 @@ class PreferenceHelper {
   static Future<UserData> getUserProfile() async {
     var name = await getValueFromPreference(keyValue.name.toString());
     var mobile = await getValueFromPreference(keyValue.mobile.toString());
+    var age = await getValueFromPreference(keyValue.age.toString());
+    var gender = await getValueFromPreference(keyValue.gender.toString());
+    var aboutus = await getValueFromPreference(keyValue.aboutus.toString());
+    var address = await getValueFromPreference(keyValue.address.toString());
     UserData user = new UserData();
     user.name = name;
     user.mobile = mobile;
+    user.age = age;
+    user.gender = gender;
+    user.aboutus = aboutus;
+    user.address = address;
     //UserData user = value == null? null: UserData.fromJson(json.decode(value.toString()));
     return user;
   }
@@ -65,8 +74,8 @@ class PreferenceHelper {
     prefs.remove(keyValue.name.toString());
     prefs.remove(keyValue.interest.toString());
     prefs.remove(keyValue.gender.toString());
-    prefs.remove(keyValue.callStatus.toString());
-    prefs.remove(keyValue.chatStatus.toString());
+    prefs.remove(keyValue.aboutus.toString());
+    prefs.remove(keyValue.address.toString());
     prefs.remove(keyValue.token.toString());
   }
 }
@@ -75,10 +84,11 @@ enum keyValue {
   id,
   mobile,
   name,
+  age,
   interest,
   gender,
-  callStatus,
-  chatStatus,
+  aboutus,
+  address,
   token,
   categoryId,
   showIntro

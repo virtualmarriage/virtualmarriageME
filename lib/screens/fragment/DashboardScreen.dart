@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:virtualmarriageME/model/BannerData.dart';
+import 'package:virtualmarriageME/screens/CustomerSupportScreen.dart';
 import 'package:virtualmarriageME/screens/EarningScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
 import 'package:virtualmarriageME/utils/carouselslider/carousel_slider.dart';
@@ -301,26 +302,32 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
 
                     Card(
-                      child: Container(
-                          height: 80,
-                          width: 140,
-                          margin: EdgeInsets.all(10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Customer Support",
-                                  style:
-                                  TextStyle(fontSize: 16, color: Colors.black)),
-                              SizedBox(height: 10,),
-                              Icon(
-                                Icons.support_agent,
-                                color: Color(0xFFEE829C),
-                              ),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => CustomerSupportScreen(),),);
+                        },
+                        child: Container(
+                            height: 80,
+                            width: 140,
+                            margin: EdgeInsets.all(10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Customer Support",
+                                    style:
+                                    TextStyle(fontSize: 16, color: Colors.black)),
+                                SizedBox(height: 10,),
+                                Icon(
+                                  Icons.support_agent,
+                                  color: Color(0xFFEE829C),
+                                ),
 
-                            ],
+                              ],
 
 
-                          )
+                            )
+                        ),
                       ),
 
                     ),

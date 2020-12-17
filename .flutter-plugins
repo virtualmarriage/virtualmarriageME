@@ -1,11 +1,11 @@
 # This is a generated file; do not edit or check into version control.
 agora_rtc_engine=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\agora_rtc_engine-1.0.5\\
-cloud_firestore=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-0.14.3\\
-cloud_firestore_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-0.2.1\\
-firebase_auth=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-0.18.3\\
-firebase_auth_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth_web-0.3.2\\
-firebase_core=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-0.5.2\\
-firebase_core_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core_web-0.2.1\\
+cloud_firestore=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-0.14.4\\
+cloud_firestore_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-0.2.1+2\\
+firebase_auth=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-0.18.4+1\\
+firebase_auth_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth_web-0.3.2+3\\
+firebase_core=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-0.5.3\\
+firebase_core_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core_web-0.2.1+1\\
 firebase_messaging=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_messaging-7.0.0\\
 firebase_storage=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_storage-4.0.1\\
 flutter_custom_tabs=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_custom_tabs-0.6.0\\
@@ -16,7 +16,7 @@ fluttertoast=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.or
 google_sign_in=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_sign_in-4.5.6\\
 google_sign_in_web=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_sign_in_web-0.9.2\\
 image_cropper=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_cropper-1.3.1\\
-image_picker=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker-0.6.7+14\\
+image_picker=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker-0.6.7+15\\
 path_provider=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-1.6.24\\
 path_provider_linux=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_linux-0.0.1+2\\
 path_provider_macos=D:\\flutter workspace\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-0.0.4+6\\

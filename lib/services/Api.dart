@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:virtualmarriageME/model/BannerData.dart';
 import 'package:virtualmarriageME/model/GetProfileData.dart';
+import 'package:virtualmarriageME/model/MakeOnlineResponse.dart';
 import 'package:virtualmarriageME/model/ProductData.dart';
 import 'package:virtualmarriageME/model/UserResponse.dart';
 import 'package:virtualmarriageME/utils/CommonComponent.dart';
@@ -150,6 +152,66 @@ class Api {
     print('Response: $response');
     progressDialog.hide();
     return response.data['id'];
+  }
+
+
+  Future<MakeOnlineResponse> makeOnline({@required BuildContext context,
+                                    @required String type,
+                                      @required String isOnline,}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Updating...');
+    progressDialog.show();
+    try {
+      FormData formData = new FormData.fromMap({
+        "type": "$type",
+        "isOnline": "$isOnline",
+      });
+      print('Request: ${formData.fields}');
+
+      Dio dio = new Dio();
+      dio.options.headers["token"] = token;
+      Response response = await dio.post("${_baseUrl}makeOnline/", data: formData);
+      print('Response: $response');
+      progressDialog.hide();
+      Map jsonMap = jsonDecode(response.data);
+      return MakeOnlineResponse.fromJson(jsonMap);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
+  }
+
+  Future<List<BannerData>> getBanner({@required BuildContext context}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Getting Profile...');
+    progressDialog.show();
+    try {
+
+      Dio dio = new Dio();
+      dio.options.headers["token"] = token;
+      //Response response = await dio.post("${_baseUrl}getProfile/");
+      print("REQUEST_URL: " + _baseUrl );
+      Response response = await dio.get("${_baseUrl}getBanner");
+      print('Response: $response');
+      progressDialog.hide();
+      //Map jsonMap = jsonDecode(response.data);
+      var data = json.decode(response.data);
+      List<BannerData> bannerList = (data["data"] as List<dynamic>).map((values) => BannerData.fromJson(values)).toList();
+      print("RESPONSE_DATA: " + response.data);
+      return bannerList;
+      //return GetBannerResponse.fromJson(jsonMap);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
   }
 
 

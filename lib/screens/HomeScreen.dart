@@ -9,6 +9,7 @@ import 'package:virtualmarriageME/screens/fragment/CallListScreen.dart';
 import 'package:virtualmarriageME/screens/fragment/ChatListScreen.dart';
 import 'package:virtualmarriageME/screens/fragment/ProfileScreen.dart';
 import 'package:virtualmarriageME/screens/leftpanel/AboutUsScreen.dart';
+import 'package:virtualmarriageME/screens/leftpanel/ConsultantScreen.dart';
 import 'package:virtualmarriageME/screens/profile/SettingScreen.dart';
 import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 
@@ -277,14 +278,20 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     Container(
                       margin: EdgeInsets.all(10),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children:<Widget> [
-                          Icon(Icons.chat, color: Colors.blue,),
-                          SizedBox(width: 10,),
-                          Text("Customer Chat Support",
-                              style: TextStyle(fontSize: 14, color: Colors.black)),
-                        ],
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => ConsultantScreen(),),);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children:<Widget> [
+                            Icon(Icons.phone_android_sharp),
+                            SizedBox(width: 10,),
+                            Text("VM Consultation",
+                                style: TextStyle(fontSize: 14, color: Colors.black)),
+                          ],
+                        ),
                       ),
                     ),
 

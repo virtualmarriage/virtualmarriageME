@@ -1,14 +1,12 @@
 class MakeOnlineResponse {
   bool status;
-  String msg;
+  String isOnline;
 
-  MakeOnlineResponse({this.status, this.msg});
+  MakeOnlineResponse({this.status, this.isOnline});
 
   MakeOnlineResponse.fromJson(Map map) {
     status = map['status'];
-    msg = map['msg'];
-
-
+    isOnline = map['isOnline'];
   }
 }
 

@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:virtualmarriageME/model/BannerData.dart';
+import 'package:virtualmarriageME/model/CustomerSupportResponse.dart';
 import 'package:virtualmarriageME/model/GetProfileData.dart';
 import 'package:virtualmarriageME/model/MakeOnlineResponse.dart';
 import 'package:virtualmarriageME/model/ProductData.dart';
@@ -17,8 +18,11 @@ import 'package:virtualmarriageME/utils/progressdialog.dart';
 import 'package:virtualmarriageME/model/EarningData.dart';
 import 'package:dio/dio.dart';
 
+import 'LoggingInterceptor.dart';
+
 class Api {
   final String _baseUrl = "https://virtualmarriage.me/portal/api/v1/serviceProvider/";
+  final String _baseUrl_comman = "https://virtualmarriage.me/portal/api/v1/common/";
   ProgressDialog progressDialog;
 
   Future<UserResponse> login({@required String mobileNo, @required BuildContext context}) async {
@@ -184,6 +188,94 @@ class Api {
       return error;
     }
   }
+
+  Future<CustomerSupportResponse> customerSupport({@required BuildContext context,
+    @required String name,
+  @required String email,
+  @required String phone,
+  @required String probDes,
+  @required String type,}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    String userId = await PreferenceHelper.getUserId();
+    print('userId: $userId');
+    String status = "1";
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Sending Data...');
+    progressDialog.show();
+    try {
+      FormData formData = new FormData.fromMap({
+        "name": "$name",
+        "email": "$email",
+        "phone": "$phone",
+        "problemDescription": "$probDes",
+        "type": "$type",
+        "userid": "$userId",
+        "status": "$status",
+      });
+      print('Request: ${formData.fields}');
+
+      Dio dio = new Dio();
+      //dio.interceptors.add(LoggingInterceptor());
+      dio.options.headers["token"] = token;
+      Response response = await dio.post("${_baseUrl_comman}customerSupport", data: formData);
+      print('Response: $response');
+      progressDialog.hide();
+      Map jsonMap = jsonDecode(response.data);
+      return CustomerSupportResponse.fromJson(jsonMap);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
+  }
+
+  Future<CustomerSupportResponse> vmConsultation({@required BuildContext context,
+    @required String name,
+    @required String email,
+    @required String phone,
+    @required String message,
+    @required String category,
+    @required String type,}) async {
+    String token = await PreferenceHelper.getToken();
+    print('token: $token');
+    String userId = await PreferenceHelper.getUserId();
+    print('userId: $userId');
+    String status = "1";
+    progressDialog= ProgressDialog(context, ProgressDialogType.Normal);
+    progressDialog.setMessage('Sending Data...');
+    progressDialog.show();
+    try {
+      FormData formData = new FormData.fromMap({
+        "name": "$name",
+        "email": "$email",
+        "phone": "$phone",
+        "message": "$message",
+        "type": "$type",
+        "userid": "$userId",
+        "status": "$status",
+        "category": "$category",
+      });
+      print('Request: ${formData.fields}');
+
+      Dio dio = new Dio();
+      //dio.interceptors.add(LoggingInterceptor());
+      dio.options.headers["token"] = token;
+      Response response = await dio.post("${_baseUrl_comman}vmConsultation", data: formData);
+      print('Response: $response');
+      progressDialog.hide();
+      Map jsonMap = jsonDecode(response.data);
+      return CustomerSupportResponse.fromJson(jsonMap);
+    } catch (error, stacktrace) {
+      progressDialog.hide();
+      CommonComponent.showToast('$error');
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return error;
+    }
+  }
+
+
 
   Future<List<BannerData>> getBanner({@required BuildContext context}) async {
     String token = await PreferenceHelper.getToken();

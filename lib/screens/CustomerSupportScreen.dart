@@ -10,9 +10,10 @@ class CustomerSupportScreen extends StatefulWidget {
 
 class _CustomerSupportScreenState extends State<CustomerSupportScreen> {
 
-  var fullname = TextEditingController();
   final nameController = TextEditingController();
-  final ageController = TextEditingController();
+  final emailController = TextEditingController();
+  final phoneController = TextEditingController();
+  final problemDescriptionController = TextEditingController();
 
   @override
   void initState() {
@@ -82,7 +83,7 @@ class _CustomerSupportScreenState extends State<CustomerSupportScreen> {
                       ),
                       SizedBox(height: 20,),
                       TextFormField(
-                        controller: ageController,
+                        controller: emailController,
                         decoration: new InputDecoration(
                           labelText: "E-Mail",
                           labelStyle: TextStyle( color: Color(0xFFEE829C) ),
@@ -113,6 +114,7 @@ class _CustomerSupportScreenState extends State<CustomerSupportScreen> {
 
                       SizedBox(height: 20,),
                       TextFormField(
+                        controller: phoneController,
                         decoration: new InputDecoration(
                           labelText: "Phone Number",
                           labelStyle: TextStyle( color: Color(0xFFEE829C) ),
@@ -143,6 +145,7 @@ class _CustomerSupportScreenState extends State<CustomerSupportScreen> {
 
                       SizedBox(height: 20,),
                       TextFormField(
+                        controller: problemDescriptionController,
                         minLines: 4,
                         maxLines: 6,
                         decoration: new InputDecoration(
@@ -189,12 +192,16 @@ class _CustomerSupportScreenState extends State<CustomerSupportScreen> {
                               style: TextStyle(fontSize: 20),),
                             onPressed: () {
 
-                              /*Api().updateProfile(name: '${nameController.text}', age: '${ageController.text}',gender: '$radioItem', context: context).then((value) => {
-                                if(value.status && value.data!= null) {
+                              Api().customerSupport(context: context, name: '${nameController.text}',
+                                  email: '${emailController.text}',
+                                  phone: '${phoneController.text}',
+                                  probDes: '${problemDescriptionController.text}',
+                                  type: 'me').then((value) => {
+                                if(value.status != null) {
                                   Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()),)
                                 }
-                              });*/
-                              //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
+                              });
+
                             },
                           )),
                     ],

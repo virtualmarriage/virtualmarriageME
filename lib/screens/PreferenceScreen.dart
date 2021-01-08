@@ -159,7 +159,6 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
                                   Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()),)
                                 }
                               });
-                              //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
                             },
                           )),
                     ],

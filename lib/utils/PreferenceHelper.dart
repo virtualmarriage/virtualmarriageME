@@ -38,6 +38,11 @@ class PreferenceHelper {
     return value.toString();
   }
 
+  static Future<String> getUserId() async {
+    var value = await getValueFromPreference(keyValue.id.toString());
+    return value.toString();
+  }
+
   static Future<UserData> getUserProfile() async {
     var name = await getValueFromPreference(keyValue.name.toString());
     var mobile = await getValueFromPreference(keyValue.mobile.toString());
@@ -66,6 +71,22 @@ class PreferenceHelper {
     return value.toString();
   }
 
+  static setChatStatus(String status) {
+    saveValueInPreference(keyValue.chatStatus.toString(),status);
+  }
+  static Future<String> getChatStatus() async {
+    var value = await getValueFromPreference(keyValue.chatStatus.toString());
+    return value.toString();
+  }
+  static setCallStatus(String status) {
+    saveValueInPreference(keyValue.callStatus.toString(),status);
+  }
+  static Future<String> getCallStatus() async {
+    var value = await getValueFromPreference(keyValue.callStatus.toString());
+    return value.toString();
+  }
+
+
   static clearPreference() async {
     final prefs = await SharedPreferences.getInstance();
     prefs.remove(keyValue.id.toString());
@@ -91,5 +112,7 @@ enum keyValue {
   address,
   token,
   categoryId,
-  showIntro
+  showIntro,
+  chatStatus,
+  callStatus
 }

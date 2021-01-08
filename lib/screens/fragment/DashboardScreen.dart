@@ -5,6 +5,7 @@ import 'package:virtualmarriageME/model/BannerData.dart';
 import 'package:virtualmarriageME/screens/CustomerSupportScreen.dart';
 import 'package:virtualmarriageME/screens/EarningScreen.dart';
 import 'package:virtualmarriageME/services/Api.dart';
+import 'package:virtualmarriageME/utils/PreferenceHelper.dart';
 import 'package:virtualmarriageME/utils/carouselslider/carousel_slider.dart';
 
 
@@ -17,13 +18,36 @@ class _DashboardScreenState extends State<DashboardScreen> {
   bool isLoading;
 
   bool isChatSwitched = true;
-  bool isCallSwitched = false;
+  bool isCallSwitched = true;
 
   @override
-  void initState() {
+   initState()  {
     super.initState();
+    ///get value form sharepreference
 
-    getBanner();
+    //getBanner();
+
+    updateOnlineOffline();
+
+  }
+
+  void updateOnlineOffline() async {
+    String isChat = await PreferenceHelper.getChatStatus();
+    print('isChat:::: $isChat');
+    String isCall = await PreferenceHelper.getCallStatus();
+    print('isCall:::: $isCall');
+    setState(() {
+      if(isChat == "false")
+        isChatSwitched = false;
+      else
+        isChatSwitched = true;
+
+      if(isCall == "false")
+        isCallSwitched = false;
+      else
+        isCallSwitched = true;
+
+    });
 
   }
 
@@ -347,10 +371,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   void makeOnline(String type, bool isOnline){
     Api().makeOnline(context: context, type: '${type}', isOnline: '${isOnline}',).then((value) => {
+
       if(value.status != null) {
-
-        print("make online successfull response"),
-
+          if(type =="chat"){
+            PreferenceHelper.setChatStatus(value.isOnline),
+          }else{
+            PreferenceHelper.setCallStatus(value.isOnline),
+          },
       }
     });
   }
@@ -388,7 +415,6 @@ final List<String> imgList = [
   'assets/banner/banner3.png',
   'assets/banner/banner4.png',
   'assets/banner/banner5.png',
-  'assets/banner/banner6.png',
  ];
 
 final List<Widget> imageSliders = imgList.map((item) => Container(
